@@ -1,0 +1,28 @@
+<div class="grid">
+
+{% assign myvar = 'This is a variable' %}
+
+{{ myvar }}
+<br>
+{% comment %}
+ajsdjdjasjd
+{% endcomment %}
+
+{% assign num1 = 8 %}
+{% assign num2 = 9 %}
+
+{{ num1 }} <br>
+{{ num2 }} <br>
+
+Addition = {{ num1 | plus: num2 }} <br>
+Subtraction = {{ num2 | minus: num1 }} <br>
+Multiply = {{ num1 | times: num2 }} <br>
+Division = {{ num2 | divided_by: num1 }} <br>
+
+  {% if num1 > num2 %}
+      {{ num1 }}
+   {% else %}
+      {{ num2 }}
+    {% endif %}
+
+</div>
