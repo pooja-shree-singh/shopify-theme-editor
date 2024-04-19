@@ -78,19 +78,28 @@
     "faq_L4JxTL": {
       "type": "faq",
       "blocks": {
+        "question_dGeWqb": {
+          "type": "question",
+          "settings": {
+            "question": "Q1",
+            "answer": "A1"
+          }
+        },
         "question_8mXfQ9": {
           "type": "question",
           "settings": {
-            "question": "",
-            "answer": ""
+            "question": "Q2",
+            "answer": "A2"
           }
         }
       },
       "block_order": [
+        "question_dGeWqb",
         "question_8mXfQ9"
       ],
+      "disabled": true,
       "settings": {
-        "headline": ""
+        "headline": "Frequently asked question"
       }
     }
   },
