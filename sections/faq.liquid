@@ -1,7 +1,31 @@
 {% schema %}
     {
         "name": "FAQ",
-        "settings": [],
+        "settings": [
+            {
+                "type": "text",
+                "label": "Headline",
+                "id": "headline"
+            }
+        ],
+        "blocks": [
+            {
+                "name": "question",
+                "type": "question",
+                "settings": [
+                    {
+                        "type": "text",
+                        "label": "question",
+                        "id": "question"
+                    },
+                    {
+                        "type": "text",
+                        "label": "answer",
+                        "id": "answer"
+                    }
+                ]
+            }
+        ],
         "presets": [
             {
                 "name": "FAQ"
