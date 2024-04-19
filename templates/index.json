@@ -81,15 +81,15 @@
         "question_dGeWqb": {
           "type": "question",
           "settings": {
-            "question": "",
-            "answer": ""
+            "question": "Q1",
+            "answer": "A1"
           }
         },
         "question_8mXfQ9": {
           "type": "question",
           "settings": {
-            "question": "",
-            "answer": ""
+            "question": "Q2",
+            "answer": "A2"
           }
         }
       },
