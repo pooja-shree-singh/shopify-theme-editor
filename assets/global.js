@@ -978,10 +978,11 @@ class VariantSelects extends HTMLElement {
   updateVariantDetails() {
     console.log(this.currentVariant);
 
-    const allvariantMetafieldData = JSON.parse(document.querySelector('#variant_metafield_data').textContent);
+    // const allvariantMetafieldData = JSON.parse(document.querySelector('#variant_metafield_data').textContent);
     // console.log(allvariantMetafieldData);
     const variantDetailsTextElement = document.querySelector('#variant-details');
-    variantDetailsTextElement.innerHTML = allvariantMetafieldData[this.currentVariant.id];
+    // variantDetailsTextElement.innerHTML = allvariantMetafieldData[this.currentVariant.id];
+    variantDetailsTextElement.innerHTML = this.currentVariant.id;
   }
 
   updateOptions() {
