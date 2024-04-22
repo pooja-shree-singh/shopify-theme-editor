@@ -800,7 +800,7 @@
       }{% unless forloop.last %},{% endunless %}
     {%- endfor -%}
     {%- for variant in product.variants -%}
-      {% assign metafield_content = variant.metafields %}
+      {% assign metafield_content = variant.metafields.custom.coffee_details %}
       "{{ variant.id }}": "{{ metafield_content }}"{% unless forloop.last %},{% endunless %}
     {%- endfor -%}
   }
