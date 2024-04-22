@@ -799,10 +799,6 @@
         "url" : {{ request.origin | append: variant.url | json }}
       }{% unless forloop.last %},{% endunless %}
     {%- endfor -%}
-    {%- for variant in product.variants -%}
-      {% assign metafield_content = variant %}
-      "{{ variant.id }}": "{{ metafield_content }}"{% unless forloop.last %},{% endunless %}
-    {%- endfor -%}
   }
 </script> 
 
