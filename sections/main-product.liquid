@@ -457,6 +457,10 @@
 
               {%- when 'variant_picker' -%}
                 {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
+                            <p class="line-item-property__field">
+                               <label for="your-name">Your name</label>
+                             <input id="your-name" type="text" name="properties[Your name]" form="{{ product_form_id }}>
+                            </p>
               {%- when 'buy_buttons' -%}
                 {%- render 'buy-buttons',
                   block: block,
