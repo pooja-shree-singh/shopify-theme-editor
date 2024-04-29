@@ -67,6 +67,16 @@
 
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
   <div class="page-width">
+    {% if settings.show_product_navigation %}
+      <div class="product-navigation">
+        {% if collection.previous_product %}
+          <a class="button previous" href="collection.previous_product">{{ settings.product_navigation_previous_text | escape }}</a>
+        {% endif %}
+        {% if collection.next_product %}
+          <a class="button next" href="collection.next_product">{{ settings.product_navigation_next_text | escape }}</a>
+        {% endif %}
+      </div>
+    {% endif %}
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
         {% render 'product-media-gallery', variant_images: variant_images %}
@@ -457,6 +467,14 @@
 
               {%- when 'variant_picker' -%}
                 {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
+                            <div class="line-item-property__field">
+                              {%- if product.type == "Snowboard" %}
+                              <div class="field">
+                                 <input class="field__input" id="your-name" type="text" name="properties[Your name]" form="{{ product_form_id }}" placeholder="Your name">
+                                 <label class="field__label" for="your-name">Your name</label>
+                              </div>
+                              {%- endif -%}
+                            </div>
               {%- when 'buy_buttons' -%}
                 {%- render 'buy-buttons',
                   block: block,
