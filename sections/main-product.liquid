@@ -67,7 +67,7 @@
 
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
   <div class="page-width">
-    {% style %}  
+    {% style %}
       .product-navigation {
         display: flex;
         justify-content: {% if collection.previous_product %}space-between{% else %}flex-end{% endif %};
@@ -75,7 +75,6 @@
         padding-bottom: {{ settings.product_navigation_padding_bottom }}px;
       }
     {% endstyle %}
-    {{collection.previous_product }}
     {% if settings.show_product_navigation %}
       <div class="product-navigation">
         {% if collection.previous_product %}

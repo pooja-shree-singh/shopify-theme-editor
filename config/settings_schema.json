@@ -41,6 +41,12 @@
         "max": 100,
         "step": 1,
         "unit": "px"
+      },
+      {
+        "type": "text",
+        "id": "product_upload-file",
+        "default": "",
+        "label": "Uploaded File"
       }
     ]
   },
