@@ -8,6 +8,55 @@
     "theme_support_url": "https:\/\/support.shopify.com\/"
   },
   {
+    "name": "Wishlist",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Subscribe our channel [websensepro](https:\/\/youtube.com\/@websensepro?sub_confirmation=1)"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable-wishlist",
+        "label": "Enable Wishlist",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "wishlist-floating-button-position",
+        "label": "Enable Floating Button",
+        "default": false
+      },
+      {
+        "type": "select",
+        "id": "floating_button-position",
+        "options": [
+          {
+            "value": "middle-left",
+            "label": "Middle Left"
+          },
+          {
+            "value": "middle-right",
+            "label": "Middle Right"
+          },
+          {
+            "value": "bottom-left",
+            "label": "Bottom Left"
+          },
+          {
+            "value": "bottom-center",
+            "label": "Bottom Center"
+          },
+          {
+            "value": "bottom-right",
+            "label": "Bottom Right"
+          }
+        ],
+        "default": "middle-right",
+        "label": "Floating Button Position"
+      }
+    ]
+  },
+  {
     "name": "Product pages",
     "settings": [
       {
@@ -41,12 +90,6 @@
         "max": 100,
         "step": 1,
         "unit": "px"
-      },
-      {
-        "type": "text",
-        "id": "product_upload-file",
-        "default": "",
-        "label": "Uploaded File"
       }
     ]
   },
@@ -1507,55 +1550,6 @@
         "label": "t:sections.all.colors.label",
         "default": "scheme-1"
       }
-    ]
-  },
-  {
-    "name":"Wishlist",
-    "settings":[
-      {
-        "type": "paragraph",
-        "content": "Subscribe our channel [websensepro](https:\/\/youtube.com\/@websensepro?sub_confirmation=1)"
-      },
-     {
-        "type":"checkbox",
-        "id":"enable-wishlist",
-        "label": "Enable Wishlist",
-        "default": false
-      },
-      {
-        "type":"checkbox",
-        "id":"wishlist-floating-button-position",
-        "label": "Enable Floating Button",
-        "default": false
-      },
-       {
-      "type": "select",
-      "id": "floating_button-position",
-      "options": [
-        {
-          "value": "middle-left",
-          "label": "Middle Left"
-        },
-        {
-          "value": "middle-right",
-          "label": "Middle Right"
-        },
-        {
-          "value": "bottom-left",
-          "label": "Bottom Left"
-        },
-        {
-          "value": "bottom-center",
-          "label": "Bottom Center"
-        },
-        {
-          "value": "bottom-right",
-          "label": "Bottom Right"
-        }
-      ],
-      "default": "middle-right",
-      "label": "Floating Button Position"
-    }
     ]
   }
 ]
