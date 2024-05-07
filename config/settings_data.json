@@ -1,5 +1,8 @@
 {
   "current": {
+    "enable-wishlist": true,
+    "wishlist-floating-button-position": true,
+    "floating_button-position": "middle-right",
     "logo": "shopify:\/\/shop_images\/soft-pink-cushioned-armchair-in-stately-salon_925x_aaddd49c-e120-4dc6-a06b-93c4b9f2c766.jpg",
     "logo_width": 90,
     "type_header_font": "assistant_n4",
