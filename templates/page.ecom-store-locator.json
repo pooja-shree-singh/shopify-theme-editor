@@ -1,0 +1,13 @@
+{
+  "layout": "theme",
+  "sections": {
+    "ecom-store-locator-page": {
+      "type": "ecom-store-locator-page",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "ecom-store-locator-page"
+  ]
+}
