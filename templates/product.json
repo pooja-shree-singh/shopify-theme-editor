@@ -22,6 +22,12 @@
             "colour": "#000000"
           }
         },
+        "custom_liquid_KhddJg": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% if settings.enable-wishlist %}\n                  <button onclick=\"toggleWishlist()\" class=\"wishlist_button\">\n                    <svg width=\"30px\" height=\"30px\" viewBox=\"0 0 24 24\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n                      <rect x=\"0\" fill=\"none\" width=\"24\" height=\"24\"\/>\n\n                      <g>\n\n                      <path d=\"M16.5 4.5c2.206 0 4 1.794 4 4 0 4.67-5.543 8.94-8.5 11.023C9.043 17.44 3.5 13.17 3.5 8.5c0-2.206 1.794-4 4-4 1.298 0 2.522.638 3.273 1.706L12 7.953l1.227-1.746c.75-1.07 1.975-1.707 3.273-1.707m0-1.5c-1.862 0-3.505.928-4.5 2.344C11.005 3.928 9.362 3 7.5 3 4.462 3 2 5.462 2 8.5c0 5.72 6.5 10.438 10 12.85 3.5-2.412 10-7.13 10-12.85C22 5.462 19.538 3 16.5 3z\"\/>\n\n                      <\/g>\n                    <\/svg>\n                  <\/button>\n                {% endif %}"
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -56,25 +62,19 @@
           "settings": {
             "share_label": "Share"
           }
-        },
-        "custom_liquid_KhddJg": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "{% if settings.enable-wishlist %}\n                  <button onclick=\"toggleWishlist()\" class=\"wishlist_button\">\n                    <svg width=\"30px\" height=\"30px\" viewBox=\"0 0 24 24\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n                      <rect x=\"0\" fill=\"none\" width=\"24\" height=\"24\"\/>\n\n                      <g>\n\n                      <path d=\"M16.5 4.5c2.206 0 4 1.794 4 4 0 4.67-5.543 8.94-8.5 11.023C9.043 17.44 3.5 13.17 3.5 8.5c0-2.206 1.794-4 4-4 1.298 0 2.522.638 3.273 1.706L12 7.953l1.227-1.746c.75-1.07 1.975-1.707 3.273-1.707m0-1.5c-1.862 0-3.505.928-4.5 2.344C11.005 3.928 9.362 3 7.5 3 4.462 3 2 5.462 2 8.5c0 5.72 6.5 10.438 10 12.85 3.5-2.412 10-7.13 10-12.85C22 5.462 19.538 3 16.5 3z\"\/>\n\n                      <\/g>\n                    <\/svg>\n                  <\/button>\n                {% endif %}"
-          }
         }
       },
       "block_order": [
         "vendor",
         "title",
         "app_theme_extension_star_rating_Dz7ERN",
+        "custom_liquid_KhddJg",
         "price",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
         "description",
-        "share",
-        "custom_liquid_KhddJg"
+        "share"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -125,11 +125,30 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "17167916408384249e": {
+      "type": "apps",
+      "blocks": {
+        "custom_node_app_app_form_nfNUJH": {
+          "type": "shopify:\/\/apps\/custom-node-app\/blocks\/app-form\/3cf55730-1212-4628-8894-22cfa532d8cf",
+          "settings": {
+            "form_title": "Registration Form",
+            "alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "custom_node_app_app_form_nfNUJH"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "main",
     "related-products",
-    "17144780525099c694"
+    "17144780525099c694",
+    "17167916408384249e"
   ]
 }
