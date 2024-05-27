@@ -128,17 +128,23 @@
     },
     "17167916408384249e": {
       "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "17168072558fcfc752": {
+      "type": "apps",
       "blocks": {
-        "custom_node_app_app_form_nfNUJH": {
+        "custom_node_app_app_form_V3BpDQ": {
           "type": "shopify:\/\/apps\/custom-node-app\/blocks\/app-form\/3cf55730-1212-4628-8894-22cfa532d8cf",
           "settings": {
-            "form_title": "Registration Form",
+            "form_title": "Forms",
             "alignment": "center"
           }
         }
       },
       "block_order": [
-        "custom_node_app_app_form_nfNUJH"
+        "custom_node_app_app_form_V3BpDQ"
       ],
       "settings": {
         "include_margins": true
@@ -149,6 +155,7 @@
     "main",
     "related-products",
     "17144780525099c694",
-    "17167916408384249e"
+    "17167916408384249e",
+    "17168072558fcfc752"
   ]
 }
