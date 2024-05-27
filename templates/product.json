@@ -133,7 +133,7 @@
           "type": "shopify:\/\/apps\/custom-node-app\/blocks\/app-form\/3cf55730-1212-4628-8894-22cfa532d8cf",
           "settings": {
             "form_title": "Registration Form",
-            "alignment": "left"
+            "alignment": "center"
           }
         }
       },
