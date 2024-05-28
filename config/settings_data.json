@@ -156,6 +156,30 @@
         "disabled": false,
         "settings": {
         }
+      },
+      "8232603958289840080": {
+        "type": "shopify:\/\/apps\/seo-manager-venntov\/blocks\/seomanager-404\/c54c366f-d4bb-4d52-8d2f-dd61ce8e7e12",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "17992116214976573926": {
+        "type": "shopify:\/\/apps\/seo-manager-venntov\/blocks\/seomanager\/c54c366f-d4bb-4d52-8d2f-dd61ce8e7e12",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "6406956604159796213": {
+        "type": "shopify:\/\/apps\/smart-seo\/blocks\/smartseo\/7b0a6064-ca2e-4392-9a1d-8c43c942357b",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "4976129024724438625": {
+        "type": "shopify:\/\/apps\/smart-seo\/blocks\/brokenLinkDetection\/7b0a6064-ca2e-4392-9a1d-8c43c942357b",
+        "disabled": false,
+        "settings": {
+        }
       }
     },
     "color_schemes": {
