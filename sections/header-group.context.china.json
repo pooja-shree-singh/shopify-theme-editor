@@ -4,5 +4,13 @@
     "market": "china"
   },
   "sections": {
+    "announcement-bar": {
+      "settings": {
+        "show_line_separator": true,
+        "auto_rotate": true
+      },
+      "blocks": {
+      }
+    }
   }
 }
