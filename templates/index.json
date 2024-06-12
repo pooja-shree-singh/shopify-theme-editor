@@ -153,12 +153,31 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "1718195018867e4421": {
+      "type": "apps",
+      "blocks": {
+        "diva_dollar_program_app_form_jjEg33": {
+          "type": "shopify:\/\/apps\/diva-dollar-program\/blocks\/app-form\/f87ea64d-12ad-4d5a-8e5c-2edc5920459d",
+          "settings": {
+            "form_title": "Redeem Point",
+            "alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "diva_dollar_program_app_form_jjEg33"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "image_banner",
     "featured_collection",
     "faq_L4JxTL",
-    "multicolumn_JDbaYN"
+    "multicolumn_JDbaYN",
+    "1718195018867e4421"
   ]
 }
