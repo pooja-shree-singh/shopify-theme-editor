@@ -149,6 +149,28 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "1718196726b7db558c": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "17181967619bd844bf": {
+      "type": "apps",
+      "blocks": {
+        "wiser_product_recommendations_wiser_fbt_cGMC3A": {
+          "type": "shopify:\/\/apps\/wiser-product-recommendations\/blocks\/wiser_fbt\/3f966edc-9a4a-465c-a4df-436d2a39160d",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "wiser_product_recommendations_wiser_fbt_cGMC3A"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -156,6 +178,8 @@
     "related-products",
     "17144780525099c694",
     "17167916408384249e",
-    "17168072558fcfc752"
+    "17168072558fcfc752",
+    "1718196726b7db558c",
+    "17181967619bd844bf"
   ]
 }
