@@ -180,6 +180,12 @@
         "disabled": false,
         "settings": {
         }
+      },
+      "2270789430191447923": {
+        "type": "shopify:\/\/apps\/discountly-pos-tier-discount\/blocks\/ac_tier\/c8a31a00-e05e-40b6-952f-fdf860eeac4d",
+        "disabled": false,
+        "settings": {
+        }
       }
     },
     "color_schemes": {
