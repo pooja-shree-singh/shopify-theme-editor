@@ -756,18 +756,11 @@ li[data-address] > h2 {
 
 
 #generateInvoiceButton {
-  background-color: #007bff;
-  color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
-
-#generateInvoiceButton:hover {
-  background-color: #0056b3;
-}
-
 
 /* Modal container */
 .modal {
