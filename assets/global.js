@@ -1315,3 +1315,41 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+// Handle form submission
+document.getElementById('invoiceForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  // Get the value from the input field
+  var paymentResponseValue = document.getElementById('payment_response').value;
+  
+  // Replace 'order_id' with the actual order ID
+  var orderId = '5838443741416';
+  
+  // Make an AJAX request to update the order metafield
+  fetch(`/admin/api/2024-07/orders/${orderId}/metafields.json`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-Requested-With': 'XMLHttpRequest',
+      'X-Shopify-Access-Token': 'Shpat_26709b70cbe8dc7e7da428fa666e3ea5'
+    },
+    body: JSON.stringify({
+      "metafield": {
+        "namespace": "payment",
+        "key": "payment_response",
+        "value": paymentResponseValue,
+        "value_type": "string"
+      }
+    })
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log('Success:', data);
+    // Close the modal
+    modal.style.display = "none";
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
+});
