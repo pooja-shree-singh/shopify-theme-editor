@@ -1339,7 +1339,7 @@ document.getElementById('invoiceForm').addEventListener('submit', function(event
         "namespace": "payment",
         "key": "payment_response",
         "value": paymentResponseValue,
-        "value_type": "string"
+        "value_type": "json"
       }
     })
   })
