@@ -1327,20 +1327,14 @@ document.getElementById('invoiceForm').addEventListener('submit', function(event
   var orderId = '5838443741416';
   
   // Make an AJAX request to update the order metafield
-  fetch(`/admin/api/2024-07/orders/${orderId}/metafields.json`, {
+  fetch('/update-order', {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json',
-      'X-Requested-With': 'XMLHttpRequest',
-      'X-Shopify-Access-Token': 'Shpat_26709b70cbe8dc7e7da428fa666e3ea5'
+      'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-      "metafield": {
-        "namespace": "payment",
-        "key": "payment_response",
-        "value": paymentResponseValue,
-        "value_type": "json"
-      }
+      orderId: '5838443741416',
+      paymentResponseValue: '{\"50%_OFF_FP_SITE-3\":{\"name\":\"90% Off Full Price\",\"campaignID\":\"40%_OFF_FP\"}}'
     })
   })
   .then(response => response.json())
