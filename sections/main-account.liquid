@@ -33,7 +33,11 @@
       <div id="generateInvoiceModal" class="modal">
         <div class="modal-content">
           <span class="close">&times;</span>
-          <p>This is a modal content!</p>
+          <form id="invoiceForm">
+            <label for="payment_response">Enter Details:</label>
+            <input type="text" id="payment_response" name="payment_response" required>
+            <button type="submit">Submit</button>
+          </form>
         </div>
       </div>
       {% paginate customer.orders by 20 %}
