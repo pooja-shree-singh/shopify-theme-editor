@@ -1344,6 +1344,6 @@ document.getElementById('invoiceForm').addEventListener('submit', function(event
     modal.style.display = "none";
   })
   .catch((error) => {
-    console.error('Error:', error);
+    console.log('Error:', error);
   });
 });
