@@ -792,3 +792,27 @@ li[data-address] > h2 {
   text-decoration: none;
   cursor: pointer;
 }
+
+/* Form styling */
+#invoiceForm {
+  display: flex;
+  flex-direction: column;
+}
+
+#invoiceForm label,
+#invoiceForm input {
+  margin-bottom: 10px;
+}
+
+#invoiceForm button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#invoiceForm button:hover {
+  background-color: #0056b3;
+}
