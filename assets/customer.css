@@ -819,6 +819,8 @@ li[data-address] > h2 {
 
 
 .error-text {
-  color: red;
-  font-weight: bold;
+    color: red;
+    font-weight: 500;
+    display: none;
+    margin: 0 0 2rem;
 }
