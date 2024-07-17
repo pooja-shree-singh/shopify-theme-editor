@@ -1336,7 +1336,6 @@ var span = document.getElementsByClassName("close")[0];
       if(dataModal) {
         const imageUrl = gidToImageUrl(dataModal);
         // Append the image to the container
-        container.appendChild(img);
         
         var QRImage = document.getElementById('QRImage');
         QRImage.src = dataModal;
