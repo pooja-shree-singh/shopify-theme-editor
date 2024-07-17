@@ -40,6 +40,13 @@
           </form>
         </div>
       </div>
+
+      <div id="QRModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          
+        </div>
+      </div>
       {% paginate customer.orders by 20 %}
         {%- if customer.orders.size > 0 -%}
           <table role="table" class="order-history">
