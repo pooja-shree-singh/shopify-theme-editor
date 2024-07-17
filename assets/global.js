@@ -1338,7 +1338,7 @@ var span = document.getElementsByClassName("close")[0];
         // Append the image to the container
         
         var QRImage = document.getElementById('QRImage');
-        QRImage.src = imageUrl;
+        QRImage.src = dataModal;
         QRmodal.style.display = "block";
       }
       // You can perform further actions using the buttonId
