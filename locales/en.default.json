@@ -468,7 +468,8 @@
       "fulfillment_status": "Fulfillment status",
       "total": "Total",
       "none": "You haven't placed any orders yet.",
-      "invoice": "Invoice"
+      "invoice": "Invoice",
+      "invoiceError": "Invoice can not be generated"
     },
     "recover_password": {
       "title": "Reset your password",
