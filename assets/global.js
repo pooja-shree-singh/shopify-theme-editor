@@ -1334,7 +1334,7 @@ document.getElementById('invoiceForm').addEventListener('submit', function(event
     },
     body: JSON.stringify({
       orderId: '5838443741416',
-      paymentResponseValue: '{\"100%_OFF_FP_SITE-3\":{\"name\":\"90% Off Full Price\",\"campaignID\":\"40%_OFF_FP\"}}'1
+      paymentResponseValue: '{\"100%_OFF_FP_SITE-3\":{\"name\":\"90% Off Full Price\",\"campaignID\":\"40%_OFF_FP\"}}'
     })
   })
   .then(response => response.json())
