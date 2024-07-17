@@ -1323,6 +1323,8 @@ var span = document.getElementsByClassName("close")[0];
       }
 
       if(dataModal) {
+        var QRImage = document.getElementById('QRImage');
+        QRImage.src = dataModal;
         QRmodal.style.display = "block";
       }
       // You can perform further actions using the buttonId
