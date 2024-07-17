@@ -1316,6 +1316,7 @@ var span = document.getElementsByClassName("close")[0];
       var orderId = event.target.dataset.orderId;
       console.log('Clicked button ID:', orderId);
       console.log('Clicked button Date:', orderDate);
+      console.log('Clicked button Date:', event.target.dataset);
       // You can perform further actions using the buttonId
     });
   });
