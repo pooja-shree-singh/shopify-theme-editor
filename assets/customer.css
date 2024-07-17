@@ -816,3 +816,9 @@ li[data-address] > h2 {
   border-radius: 5px;
   cursor: pointer;
 }
+
+
+.error-text {
+  color: red;
+  font-weight: bold;
+}
