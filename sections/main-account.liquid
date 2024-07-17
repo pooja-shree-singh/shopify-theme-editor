@@ -99,7 +99,7 @@
                     role="cell"
                     data-label="{{ 'customer.orders.invoice' | t }}"
                   >
-                    <button id="generateInvoiceButton" class="generateInvoiceButton btn" data-order-id="{{ order.id }}" data-order-date="{{ order.created_at }}">Generate Invoice</button>
+                    <button id="generateInvoiceButton" class="generateInvoiceButton btn" data-order-id="{{ order.id }}" data-order-date="{{ order.created_at }}" data-modal=true>Generate Invoice</button>
                   </td>
                 </tr>
               {%- endfor -%}
