@@ -1332,7 +1332,7 @@ var span = document.getElementsByClassName("close")[0];
       }
 
       if(!dataModal && !showResult) {
-        const errorMessageContainer = this.closest('.showInvoiceError');
+        const errorMessageContainer = this;
         console.log(errorMessageContainer);
         errorMessageContainer.style.display = "block";
       }
