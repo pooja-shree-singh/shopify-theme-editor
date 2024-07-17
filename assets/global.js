@@ -1354,6 +1354,7 @@ var spanClick = document.querySelectorAll('span.close');
   spanClick.forEach(function(button) {
     spanClick.addEventListener('click', function(event) {
       //Close all the modals
+      console.log(event);
       modal.style.display = "none";
       QRmodal.style.display = "none";
     });
