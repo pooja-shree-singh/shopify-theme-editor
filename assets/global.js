@@ -1345,17 +1345,6 @@ var span = document.getElementsByClassName("close")[0];
     });
   });
 
-// When the user clicks the button, open the modal
-// btn.onclick = function() {
-//   console.log(modal);
-//   console.log(btn);
-//   console.log(span);
-//   const dateToCheck = '2024-07-31';
-//   const result = isCurrentMonth(dateToCheck);
-//   console.log(result);
-//   modal.style.display = "block";
-// }
-
 // When the user clicks on <span> (x), close the modal
 var spanClick = document.querySelectorAll('span.close');
 
