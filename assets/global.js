@@ -1315,7 +1315,7 @@ var span = document.getElementsByClassName("close")[0];
       var orderDate = event.target.dataset.orderDate;
       var orderId = event.target.dataset.orderId;
       var dataModal = event.target.dataset.dataModal;
-
+      console.log(dataModal);
       if(dataModal) {
         modal.style.display = "block";
       }
