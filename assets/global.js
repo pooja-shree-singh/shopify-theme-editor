@@ -1286,6 +1286,19 @@ class ProductRecommendations extends HTMLElement {
 
 customElements.define('product-recommendations', ProductRecommendations);
 
+function isCurrentMonth(date) {
+  const givenDate = new Date(date);
+  const currentDate = new Date();
+
+  const givenMonth = givenDate.getMonth();
+  const givenYear = givenDate.getFullYear();
+
+  const currentMonth = currentDate.getMonth();
+  const currentYear = currentDate.getFullYear();
+
+  return givenMonth === currentMonth && givenYear === currentYear;
+}
+
 // Get the modal
 var modal = document.getElementById("generateInvoiceModal");
 
@@ -1300,6 +1313,9 @@ btn.onclick = function() {
   console.log(modal);
   console.log(btn);
   console.log(span);
+  const dateToCheck = '2024-07-15';
+  const result = isCurrentMonth(dateToCheck);
+  console.log(result);
   modal.style.display = "block";
 }
 
