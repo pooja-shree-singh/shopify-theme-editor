@@ -28,7 +28,7 @@
   <div>
     <div>
       <h2>{{ 'customer.orders.title' | t }}</h2>
-      <button id="generateInvoiceButton" class="btn">Generate Invoice</button>
+      
       <!-- The Modal -->
       <div id="generateInvoiceModal" class="modal">
         <div class="modal-content">
@@ -92,6 +92,13 @@
                   </td>
                   <td headers="RowOrder ColumnTotal" role="cell" data-label="{{ 'customer.orders.total' | t }}">
                     {{ order.total_net_amount | money_with_currency }}
+                  </td>
+                  <td
+                    headers="RowOrder ColumnInvoice"
+                    role="cell"
+                    data-label="{{ 'customer.orders.order_number' | t }}"
+                  >
+                    <button id="generateInvoiceButton" class="btn {{ 'customer.orders.order_number' | t }}">Generate Invoice</button>
                   </td>
                 </tr>
               {%- endfor -%}
