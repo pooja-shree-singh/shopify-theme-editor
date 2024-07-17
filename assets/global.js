@@ -1303,21 +1303,31 @@ function isCurrentMonth(date) {
 var modal = document.getElementById("generateInvoiceModal");
 
 // Get the button that opens the modal
-var btn = document.querySelector('.generateInvoiceButton');
-console.log(btn);
+var buttons = document.querySelectorAll('.generateInvoiceButton');
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
+
+ // Add click event listener to each button
+  buttons.forEach(function(button) {
+    button.addEventListener('click', function(event) {
+      // Get the ID of the clicked button
+      var buttonId = event.target.id;
+      console.log('Clicked button ID:', event);
+      // You can perform further actions using the buttonId
+    });
+  });
+
 // When the user clicks the button, open the modal
-btn.onclick = function() {
-  console.log(modal);
-  console.log(btn);
-  console.log(span);
-  const dateToCheck = '2024-07-31';
-  const result = isCurrentMonth(dateToCheck);
-  console.log(result);
-  modal.style.display = "block";
-}
+// btn.onclick = function() {
+//   console.log(modal);
+//   console.log(btn);
+//   console.log(span);
+//   const dateToCheck = '2024-07-31';
+//   const result = isCurrentMonth(dateToCheck);
+//   console.log(result);
+//   modal.style.display = "block";
+// }
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
