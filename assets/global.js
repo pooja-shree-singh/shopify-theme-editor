@@ -1314,7 +1314,7 @@ var span = document.getElementsByClassName("close")[0];
       // Get the Order ID & Date of the clicked button
       var orderDate = event.target.dataset.orderDate;
       var orderId = event.target.dataset.orderId;
-      var modal = event.target.dataset.modal;
+      var dataModal = event.target.dataset.dataModal;
 
       if(modal) {
         modal.style.display = "block";
