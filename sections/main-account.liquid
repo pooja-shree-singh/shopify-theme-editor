@@ -106,7 +106,7 @@
                     role="cell"
                     data-label="{{ 'customer.orders.invoice' | t }}"
                   >
-                    {% assign qrcode_value = order.metafields.custom.qrcode %}
+                    {% assign qrcode_value = order.metafields.custom.qrcode.value %}
                     <button id="generateInvoiceButton" class="generateInvoiceButton btn" data-order-id="{{ order.id }}" data-order-date="{{ order.created_at }}" data-modal="{{ qrcode_value }}">Generate Invoice</button>
                   </td>
                 </tr>
