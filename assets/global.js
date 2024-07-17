@@ -1342,11 +1342,11 @@ var span = document.getElementsByClassName("close")[0];
   });
 
 // When the user clicks on <span> (x), close the modal
-var spanClick = document.querySelectorAll('.close');
+var spanClick = document.querySelectorAll('span.close');
 
 // Add click event listener to each button
-  spanClick.forEach(function(button) {
-    spanClick.addEventListener('click', function(event) {
+  spanClick.forEach(function(item) {
+    item.addEventListener('click', function(event) {
       //Close all the modals
       console.log(event);
       modal.style.display = "none";
