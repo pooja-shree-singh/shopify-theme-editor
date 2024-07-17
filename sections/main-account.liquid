@@ -107,6 +107,7 @@
                     data-label="{{ 'customer.orders.invoice' | t }}"
                   >
                     {% assign qrcode_value = order.metafields.custom.qrcode.value %}
+                    {{ images[qrcode_value] | image_url: width: 300 | image_tag }}
                     <button id="generateInvoiceButton" class="generateInvoiceButton btn" data-order-id="{{ order.id }}" data-order-date="{{ order.created_at }}" data-modal="{{ qrcode_value }}">Generate Invoice</button>
                   </td>
                 </tr>
