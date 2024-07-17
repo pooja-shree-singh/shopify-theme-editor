@@ -1314,9 +1314,11 @@ var span = document.getElementsByClassName("close")[0];
       // Get the Order ID & Date of the clicked button
       var orderDate = event.target.dataset.orderDate;
       var orderId = event.target.dataset.orderId;
-      console.log('Clicked button ID:', orderId);
-      console.log('Clicked button Date:', orderDate);
-      console.log('Clicked button Date:', event.target.dataset);
+      var modal = event.target.dataset.modal;
+
+      if(modal) {
+        modal.style.display = "block";
+      }
       // You can perform further actions using the buttonId
     });
   });
