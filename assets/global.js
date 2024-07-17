@@ -1295,7 +1295,8 @@ function isCurrentMonth(date) {
 
   const currentMonth = currentDate.getMonth();
   const currentYear = currentDate.getFullYear();
-
+console.log(givenMonth);
+console.log(currentMonth);
   return givenMonth === currentMonth && givenYear === currentYear;
 }
 
@@ -1320,7 +1321,7 @@ var span = document.getElementsByClassName("close")[0];
       console.log(orderId);
       console.log(orderDate);
       console.log(showResult);
-      if(dataModal) {
+      if(dataModal && showResult) {
         modal.style.display = "block";
       }
       // You can perform further actions using the buttonId
