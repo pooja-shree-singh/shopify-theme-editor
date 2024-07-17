@@ -1301,6 +1301,7 @@ function isCurrentMonth(date) {
 
 // Get the modal
 var modal = document.getElementById("generateInvoiceModal");
+var QRmodal = document.getElementById("QRModal");
 
 // Get the button that opens the modal
 var buttons = document.querySelectorAll('.generateInvoiceButton');
@@ -1316,12 +1317,13 @@ var span = document.getElementsByClassName("close")[0];
       var orderId = event.target.dataset.orderId;
       var dataModal = event.target.dataset.modal;
       const showResult = isCurrentMonth(orderDate);
-      console.log(dataModal);
-      console.log(orderId);
-      console.log(orderDate);
-      console.log(showResult);
-      if(dataModal && showResult) {
+
+      if(!dataModal && showResult) {
         modal.style.display = "block";
+      }
+
+      if(dataModal) {
+        QRmodal.style.display = "block";
       }
       // You can perform further actions using the buttonId
     });
@@ -1339,15 +1341,22 @@ var span = document.getElementsByClassName("close")[0];
 // }
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
+span.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+  if (event.target == QRmodal) {
+    QRmodal.style.display = "none";
+  }
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
-    console.log(event.target)
     modal.style.display = "none";
+  }
+  if (event.target == QRmodal) {
+    QRmodal.style.display = "none";
   }
 }
 
