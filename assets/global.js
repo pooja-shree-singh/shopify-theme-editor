@@ -1338,7 +1338,7 @@ var span = document.getElementsByClassName("close")[0];
         // Append the image to the container
         
         var QRImage = document.getElementById('QRImage');
-        QRImage.src = dataModal;
+        QRImage.src = "https://cdn.shopify.com/s/files/1/0687/4683/8248/"+dataModal;
         QRmodal.style.display = "block";
       }
       // You can perform further actions using the buttonId
