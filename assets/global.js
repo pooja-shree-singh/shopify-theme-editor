@@ -1315,9 +1315,11 @@ var span = document.getElementsByClassName("close")[0];
       var orderDate = event.target.dataset.orderDate;
       var orderId = event.target.dataset.orderId;
       var dataModal = event.target.dataset.modal;
+      const showResult = isCurrentMonth(orderDate);
       console.log(dataModal);
       console.log(orderId);
       console.log(orderDate);
+      console.log(showResult);
       if(dataModal) {
         modal.style.display = "block";
       }
