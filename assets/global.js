@@ -1332,7 +1332,7 @@ var span = document.getElementsByClassName("close")[0];
       }
 
       if(!dataModal && !showResult) {
-        const errorMessageContainer = this;
+        const errorMessageContainer = this.next();
         console.log(errorMessageContainer);
         errorMessageContainer.style.display = "block";
       }
