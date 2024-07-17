@@ -55,6 +55,7 @@
                   {{ 'customer.orders.fulfillment_status' | t }}
                 </th>
                 <th id="ColumnTotal" scope="col" role="columnheader">{{ 'customer.orders.total' | t }}</th>
+                <th id="ColumnInvoice" scope="col" role="columnheader">{{ 'customer.orders.invoice' | t }}</th>
               </tr>
             </thead>
             <tbody role="rowgroup">
@@ -97,9 +98,9 @@
                   <td
                     headers="RowOrder ColumnInvoice"
                     role="cell"
-                    data-label="{{ 'customer.orders.order_number' | t }}"
+                    data-label="{{ 'customer.orders.invoice' | t }}"
                   >
-                    <button id="generateInvoiceButton" class="generateInvoiceButton btn" data-order-id="{{ order.id }}">Generate Invoice</button>
+                    <button id="generateInvoiceButton" class="generateInvoiceButton btn" data-order-id="{{ order.id }}" data-order-date="{{ order.created_at | date: '%B %d, %Y' }}">Generate Invoice</button>
                   </td>
                 </tr>
               {%- endfor -%}
