@@ -1348,11 +1348,16 @@ var span = document.getElementsByClassName("close")[0];
 // }
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function(event) {
-  console.log(event.target);
-    modal.style.display = "none";
-    QRmodal.style.display = "none";
-}
+var spanClick = document.querySelectorAll('span.onclick');
+
+// Add click event listener to each button
+  spanClick.forEach(function(button) {
+    spanClick.addEventListener('click', function(event) {
+      //Close all the modals
+      modal.style.display = "none";
+      QRmodal.style.display = "none";
+    });
+  });
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
