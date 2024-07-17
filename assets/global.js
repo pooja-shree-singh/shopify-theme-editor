@@ -1295,10 +1295,7 @@ function isCurrentMonth(date) {
 
   const currentMonth = currentDate.getMonth();
   const currentYear = currentDate.getFullYear();
-console.log(givenMonth);
-console.log(currentMonth);
-console.log(givenDate);
-console.log(currentDate);
+
   return givenMonth === currentMonth && givenYear === currentYear;
 }
 
