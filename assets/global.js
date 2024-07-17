@@ -1290,7 +1290,7 @@ customElements.define('product-recommendations', ProductRecommendations);
 var modal = document.getElementById("generateInvoiceModal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("generateInvoiceButton");
+var btn = document.getElementsByClassName("generateInvoiceButton")[0];
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
