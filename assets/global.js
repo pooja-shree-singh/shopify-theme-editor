@@ -1317,6 +1317,10 @@ var span = document.getElementsByClassName("close")[0];
       modal.style.display = "none";
       QRmodal.style.display = "none";
 
+      // Clear Previous Image Url
+      var QRImage = document.getElementById('QRImage');
+      QRImage.src = "";
+
       // Get the Order ID & Date of the clicked button
       var orderDate = event.target.dataset.orderDate;
       var orderId = event.target.dataset.orderId;
@@ -1329,9 +1333,7 @@ var span = document.getElementsByClassName("close")[0];
 
       if(dataModal) {
         // Append the image to the container
-        var imgCDNPath = "https://cdn.shopify.com/s/files/1/0687/4683/8248/";
-        
-        var QRImage = document.getElementById('QRImage');
+        var imgCDNPath = "https://cdn.shopify.com/s/files/1/0687/4683/8248/";        
         QRImage.src = imgCDNPath+dataModal;
         QRmodal.style.display = "block";
       }
