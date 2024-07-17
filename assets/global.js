@@ -1299,12 +1299,6 @@ function isCurrentMonth(date) {
   return givenMonth === currentMonth && givenYear === currentYear;
 }
 
-// Function to convert GID to image URL
-function gidToImageUrl(gid) {
-  const id = gid.split('/').pop();
-  return `/admin/api/2024-07/images/${id}`;
-}
-
 // Get the modal
 var modal = document.getElementById("generateInvoiceModal");
 var QRmodal = document.getElementById("QRModal");
@@ -1334,11 +1328,11 @@ var span = document.getElementsByClassName("close")[0];
       }
 
       if(dataModal) {
-        const imageUrl = gidToImageUrl(dataModal);
         // Append the image to the container
+        var imgCDNPath = "https://cdn.shopify.com/s/files/1/0687/4683/8248/";
         
         var QRImage = document.getElementById('QRImage');
-        QRImage.src = "https://cdn.shopify.com/s/files/1/0687/4683/8248/"+dataModal;
+        QRImage.src = imgCDNPath+dataModal;
         QRmodal.style.display = "block";
       }
       // You can perform further actions using the buttonId
