@@ -1333,7 +1333,6 @@ var span = document.getElementsByClassName("close")[0];
 
       if(!dataModal && !showResult) {
         const errorMessageContainer = this.nextElementSibling;
-        console.log(errorMessageContainer);
         errorMessageContainer.style.display = "block";
       }
 
