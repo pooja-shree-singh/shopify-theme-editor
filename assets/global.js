@@ -1333,6 +1333,7 @@ var span = document.getElementsByClassName("close")[0];
 
       if(!dataModal && !showResult) {
         const errorMessageContainer = this.closest('.showInvoiceError');
+        console.log(errorMessageContainer);
         errorMessageContainer.style.display = "block";
       }
 
