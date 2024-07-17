@@ -1312,6 +1312,11 @@ var span = document.getElementsByClassName("close")[0];
  // Add click event listener to each button
   buttons.forEach(function(button) {
     button.addEventListener('click', function(event) {
+
+      //Close all the modals
+      modal.style.display = "none";
+      QRmodal.style.display = "none";
+
       // Get the Order ID & Date of the clicked button
       var orderDate = event.target.dataset.orderDate;
       var orderId = event.target.dataset.orderId;
