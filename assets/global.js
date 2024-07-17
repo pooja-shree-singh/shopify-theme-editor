@@ -1313,7 +1313,7 @@ btn.onclick = function() {
   console.log(modal);
   console.log(btn);
   console.log(span);
-  const dateToCheck = '2024-07-15';
+  const dateToCheck = '2024-08-01';
   const result = isCurrentMonth(dateToCheck);
   console.log(result);
   modal.style.display = "block";
