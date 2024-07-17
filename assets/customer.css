@@ -756,7 +756,7 @@ li[data-address] > h2 {
 
 /* Invoice Button */
 
-.generateInvoiceButton {
+#generateInvoiceButton {
     margin: -1rem 0 2rem;
 }
 
