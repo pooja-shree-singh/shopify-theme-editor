@@ -1316,7 +1316,7 @@ var span = document.getElementsByClassName("close")[0];
       var orderId = event.target.dataset.orderId;
       var dataModal = event.target.dataset.dataModal;
 
-      if(modal) {
+      if(dataModal) {
         modal.style.display = "block";
       }
       // You can perform further actions using the buttonId
