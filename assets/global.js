@@ -1331,6 +1331,11 @@ var span = document.getElementsByClassName("close")[0];
         modal.style.display = "block";
       }
 
+      if(!dataModal && !showResult) {
+        const errorMessageContainer = this.closest('.showInvoiceError');
+        errorMessageContainer.style.display = "block";
+      }
+
       if(dataModal) {
         // Append the image to the container
         var imgCDNPath = "https://cdn.shopify.com/s/files/1/0687/4683/8248/";        
