@@ -1311,9 +1311,11 @@ var span = document.getElementsByClassName("close")[0];
  // Add click event listener to each button
   buttons.forEach(function(button) {
     button.addEventListener('click', function(event) {
-      // Get the ID of the clicked button
-      var buttonId = event.target.id;
-      console.log('Clicked button ID:', event);
+      // Get the Order ID & Date of the clicked button
+      var orderDate = event.target.dataset.orderDate;
+      var orderId = event.target.dataset.orderId;
+      console.log('Clicked button ID:', orderId);
+      console.log('Clicked button Date:', orderDate);
       // You can perform further actions using the buttonId
     });
   });
