@@ -1374,7 +1374,8 @@ document.getElementById('invoiceForm').addEventListener('submit', function(event
   event.preventDefault();
   
   // Get the value from the input field
-  var paymentResponseValue = document.getElementById('payment_response').value;
+  var tin_number = document.getElementById('tin_number').value;
+  var order_number = document.getElementById('order_number').value;
   
   // Replace 'order_id' with the actual order ID
   var orderId = '5838443741416';
@@ -1387,7 +1388,7 @@ document.getElementById('invoiceForm').addEventListener('submit', function(event
     },
     body: JSON.stringify({
       orderId: '5838443741416',
-      paymentResponseValue: '{\"100%_OFF_FP_SITE-3\":{\"name\":\"90% Off Full Price\",\"campaignID\":\"40%_OFF_FP\"}}'
+      paymentResponseValue: tin_number
     })
   })
   .then(response => response.json())
