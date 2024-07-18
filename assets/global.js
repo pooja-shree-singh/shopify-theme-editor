@@ -1399,7 +1399,6 @@ var spanClick = document.querySelectorAll('span.close');
     item.addEventListener('click', function(event) {
       //Close all the modals
       closeModal();
-      modal.style.display = "none";
       QRmodal.style.display = "none";
     });
   });
@@ -1407,7 +1406,6 @@ var spanClick = document.querySelectorAll('span.close');
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
-    modal.style.display = "none";
     closeModal();
   }
   if (event.target == QRmodal) {
@@ -1456,7 +1454,7 @@ document.getElementById('invoiceForm').addEventListener('submit', function(event
     .then(data => {
       console.log('Success:', data);
       // Close the modal
-      modal.style.display = "none";
+      closeModal();
     })
     .catch((error) => {
       var ajaxError = document.getElementsByClassName('modal-form-ajax-validation');
