@@ -1408,17 +1408,20 @@ document.getElementById('invoiceForm').addEventListener('submit', function(event
   console.log(tin_number);
   if(tin_number === '') {
     var fieldValid = document.getElementsByClassName('modal-form-error')[0];
-    console.log(fieldValid);
     fieldValid.style.display = "block";
     flag = false;
-    console.log(fieldValid);
+  }else{
+    fieldValid.style.display = "none";
+    flag = true;
   }
 
   if (!validateMalaysiaTIN(tin_number)) {
     flag = false;
     var formTINValid = document.getElementsByClassName('modal-form-tin-validation')[0];
-    console.log(formTINValid);
     formTINValid.style.display = "block";
+  }else{
+    formTINValid.style.display = "none";
+    flag = true;
   }
 
   if(flag) {
