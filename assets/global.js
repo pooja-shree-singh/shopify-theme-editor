@@ -1413,7 +1413,6 @@ document.getElementById('invoiceForm').addEventListener('submit', function(event
     flag = false;
   }else{
     fieldValid.style.display = "none";
-    flag = true;
   }
 
   if (!validateMalaysiaTIN(tin_number)) {
@@ -1421,7 +1420,6 @@ document.getElementById('invoiceForm').addEventListener('submit', function(event
     formTINValid.style.display = "block";
   }else{
     formTINValid.style.display = "none";
-    flag = true;
   }
 
   if(flag) {
