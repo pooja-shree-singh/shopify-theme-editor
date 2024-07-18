@@ -1406,14 +1406,14 @@ document.getElementById('invoiceForm').addEventListener('submit', function(event
   var orderId = document.getElementById('orderId').value;
   var flag = true;
   if(tin_number === '') {
-    var fieldValid = document.getElementById('modal-form-error');
+    var fieldValid = document.getElementsByClassName('modal-form-error');
     fieldValid.style.display = "block";
     flag = false;
   }
 
   if (!validateMalaysiaTIN(tin_number)) {
     flag = false;
-    var formTINValid = document.getElementById('modal-form-tin-validation');
+    var formTINValid = document.getElementsByClassName('modal-form-tin-validation');
     formTINValid.style.display = "block";
   }
 
@@ -1438,7 +1438,7 @@ document.getElementById('invoiceForm').addEventListener('submit', function(event
       modal.style.display = "none";
     })
     .catch((error) => {
-      var ajaxError = document.getElementById('modal-form-ajax-validation');
+      var ajaxError = document.getElementsByClassName('modal-form-ajax-validation');
       ajaxError.textContent = error;
       ajaxError.style.display = "block";
       console.log('Error:', error);
