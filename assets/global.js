@@ -1438,6 +1438,9 @@ document.getElementById('invoiceForm').addEventListener('submit', function(event
       modal.style.display = "none";
     })
     .catch((error) => {
+      var ajaxError = document.getElementById('modal-form-ajax-validation');
+      ajaxError.textContent = error;
+      ajaxError.style.display = "block";
       console.log('Error:', error);
     });
   }
