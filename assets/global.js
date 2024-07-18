@@ -1426,6 +1426,7 @@ document.getElementById('invoiceForm').addEventListener('submit', function(event
   var orderId = document.getElementById('orderId').value;
   var fieldValid = document.getElementsByClassName('modal-form-error')[0];
   var formTINValid = document.getElementsByClassName('modal-form-tin-validation')[0];
+  var ajaxMessage = document.getElementsByClassName('modal-form-ajax-validation')[0];
   var flag = true;
   
   if(tin_number === '') {
@@ -1457,16 +1458,12 @@ document.getElementById('invoiceForm').addEventListener('submit', function(event
     .then(response => response.json())
     .then(data => {
       console.log('Success:', data);
-      var ajaxError = document.getElementsByClassName('modal-form-ajax-validation')[0];
-      ajaxError.textContent = "The Invoice has been generated";
-      ajaxError.style.display = "block";
-      // Close the modal
-      // closeModal();
+      ajaxMessage.textContent = "The Invoice has been generated";
+      ajaxMessage.style.display = "block";
     })
     .catch((error) => {
-      var ajaxError = document.getElementsByClassName('modal-form-ajax-validation')[0];
-      ajaxError.textContent = error;
-      ajaxError.style.display = "block";
+      ajaxMessage.textContent = error;
+      ajaxMessage.style.display = "block";
       console.log('Error:', error);
     });
   }
