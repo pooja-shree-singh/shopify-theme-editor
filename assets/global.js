@@ -1457,8 +1457,11 @@ document.getElementById('invoiceForm').addEventListener('submit', function(event
     .then(response => response.json())
     .then(data => {
       console.log('Success:', data);
+      var ajaxError = document.getElementsByClassName('modal-form-ajax-validation')[0];
+      ajaxError.textContent = "The Invoice has been generated";
+      ajaxError.style.display = "block";
       // Close the modal
-      closeModal();
+      // closeModal();
     })
     .catch((error) => {
       var ajaxError = document.getElementsByClassName('modal-form-ajax-validation')[0];
