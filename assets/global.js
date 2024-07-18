@@ -1404,10 +1404,11 @@ document.getElementById('invoiceForm').addEventListener('submit', function(event
   // Get the value from the input field
   var tin_number = document.getElementById('tin_number').value;
   var orderId = document.getElementById('orderId').value;
+  var fieldValid = document.getElementsByClassName('modal-form-error')[0];
+  var formTINValid = document.getElementsByClassName('modal-form-tin-validation')[0];
   var flag = true;
-  console.log(tin_number);
+  
   if(tin_number === '') {
-    var fieldValid = document.getElementsByClassName('modal-form-error')[0];
     fieldValid.style.display = "block";
     flag = false;
   }else{
@@ -1417,7 +1418,6 @@ document.getElementById('invoiceForm').addEventListener('submit', function(event
 
   if (!validateMalaysiaTIN(tin_number)) {
     flag = false;
-    var formTINValid = document.getElementsByClassName('modal-form-tin-validation')[0];
     formTINValid.style.display = "block";
   }else{
     formTINValid.style.display = "none";
