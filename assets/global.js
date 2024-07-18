@@ -1316,6 +1316,7 @@ var span = document.getElementsByClassName("close")[0];
       //Close all the modals
       modal.style.display = "none";
       QRmodal.style.display = "none";
+      document.getElementById('order_number').value('');
 
       // Clear Previous Image Url
       var QRImage = document.getElementById('QRImage');
