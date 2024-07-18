@@ -1439,7 +1439,6 @@ document.getElementById('invoiceForm').addEventListener('submit', function(event
   }
 
   if(flag) {
-    console.log(tin_number);
     // Make an AJAX request to update the order metafield
     fetch('http://localhost:3000/update-order', {
       method: 'POST',
@@ -1458,7 +1457,7 @@ document.getElementById('invoiceForm').addEventListener('submit', function(event
       closeModal();
     })
     .catch((error) => {
-      var ajaxError = document.getElementsByClassName('modal-form-ajax-validation');
+      var ajaxError = document.getElementsByClassName('modal-form-ajax-validation')[0];
       ajaxError.textContent = error;
       ajaxError.style.display = "block";
       console.log('Error:', error);
