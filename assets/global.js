@@ -1405,6 +1405,7 @@ document.getElementById('invoiceForm').addEventListener('submit', function(event
   var tin_number = document.getElementById('tin_number').value;
   var orderId = document.getElementById('orderId').value;
   var flag = true;
+  console.log(tin_number);
   if(tin_number === '') {
     var fieldValid = document.getElementsByClassName('modal-form-error');
     console.log(fieldValid);
