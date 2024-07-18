@@ -36,8 +36,9 @@
           <form id="invoiceForm">
             <label for="tin_number">{{ 'customer.orders.tin' | t }}</label>
             <input type="text" id="tin_number" name="tin_number">
-            <input type="text" id="order_number" name="order_number">
+            <input type="hidden" id="order_number" name="order_number">
             <button type="submit">Submit</button>
+            <span class="modal-form-error error-text"></span>
           </form>
         </div>
       </div>
