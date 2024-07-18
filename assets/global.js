@@ -1411,6 +1411,7 @@ document.getElementById('invoiceForm').addEventListener('submit', function(event
     console.log(fieldValid);
     fieldValid.style.display = "block";
     flag = false;
+    console.log(fieldValid);
   }
 
   if (!validateMalaysiaTIN(tin_number)) {
