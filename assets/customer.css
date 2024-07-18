@@ -764,7 +764,7 @@ li[data-address] > h2 {
 .modal {
   display: none; /* Hidden by default */
   position: fixed;
-  z-index: 1;
+  z-index: 100;
   left: 0;
   top: 0;
   width: 100%;
@@ -780,7 +780,11 @@ li[data-address] > h2 {
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
+  width: 50%;
+}
+
+#QRModal .modal-content {
+  width: 14%
 }
 
 /* Close button */
