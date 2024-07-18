@@ -1439,6 +1439,7 @@ document.getElementById('invoiceForm').addEventListener('submit', function(event
   }
 
   if(flag) {
+    console.log(tin_number);
     // Make an AJAX request to update the order metafield
     fetch('http://localhost:3000/update-order', {
       method: 'POST',
