@@ -1425,8 +1425,6 @@ document.getElementById('invoiceForm').addEventListener('submit', function(event
   }
 
   if(flag) {
-    fieldValid.style.display = "none";
-    formTINValid.style.display = "none";
     // Make an AJAX request to update the order metafield
     fetch('http://localhost:3000/update-order', {
       method: 'POST',
