@@ -1338,6 +1338,10 @@ function closeModal() {
     var fieldValid = document.getElementsByClassName('modal-form-error')[0];
     var formTINValid = document.getElementsByClassName('modal-form-tin-validation')[0];
 
+    var ajaxError = document.getElementsByClassName('modal-form-ajax-validation')[0];
+    ajaxError.textContent = '';
+    ajaxError.style.display = "none";
+
     fieldValid.style.display = "none";
     formTINValid.style.display = "none";
 }
