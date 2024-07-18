@@ -1328,6 +1328,7 @@ var span = document.getElementsByClassName("close")[0];
       const showResult = isCurrentMonth(orderDate);
 
       if(!dataModal && showResult) {
+        document.getElementById('order_number').value(orderId);
         modal.style.display = "block";
       }
 
