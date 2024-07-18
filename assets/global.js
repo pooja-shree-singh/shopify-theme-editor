@@ -1286,6 +1286,7 @@ class ProductRecommendations extends HTMLElement {
 
 customElements.define('product-recommendations', ProductRecommendations);
 
+// validate the date
 function isCurrentMonth(date) {
   const givenDate = new Date(date);
   const currentDate = new Date();
@@ -1297,6 +1298,31 @@ function isCurrentMonth(date) {
   const currentYear = currentDate.getFullYear();
 
   return givenMonth === currentMonth && givenYear === currentYear;
+}
+
+// Validate TIN Number
+function validateMalaysiaTIN(tin) {
+    // Regular expression to match the NRIC format YYMMDD-##-####
+    const tinRegex = /^\d{6}-\d{2}-\d{4}$/;
+
+    if (!tinRegex.test(tin)) {
+        return false;
+    }
+
+    // Extract date parts from TIN
+    const year = parseInt(tin.substring(0, 2), 10);
+    const month = parseInt(tin.substring(2, 4), 10);
+    const day = parseInt(tin.substring(4, 6), 10);
+
+    // Validate date
+    const fullYear = year > 50 ? 1900 + year : 2000 + year;
+    const date = new Date(fullYear, month - 1, day);
+
+    if (date.getFullYear() !== fullYear || date.getMonth() + 1 !== month || date.getDate() !== day) {
+        return false;
+    }
+
+    return true;
 }
 
 // Get the modal
@@ -1378,25 +1404,39 @@ document.getElementById('invoiceForm').addEventListener('submit', function(event
   // Get the value from the input field
   var tin_number = document.getElementById('tin_number').value;
   var orderId = document.getElementById('orderId').value;
-  
-  // Make an AJAX request to update the order metafield
-  fetch('http://localhost:3000/update-order', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      orderId: orderId,
-      formFieldValue: tin_number
+  var flag = false;
+
+  if (validateMalaysiaTIN(tin_number)) {
+    console.log("Valid TIN");
+    flag = true;
+    formTINValid.style.display = "none";
+  } else {
+    flag = false;
+    var formTINValid = document.getElementById('modal-form-tin-validation');
+    formTINValid.style.display = "block";
+    console.log("Invalid TIN");
+  }
+
+  if(flag) {
+    // Make an AJAX request to update the order metafield
+    fetch('http://localhost:3000/update-order', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        orderId: orderId,
+        formFieldValue: tin_number
+      })
     })
-  })
-  .then(response => response.json())
-  .then(data => {
-    console.log('Success:', data);
-    // Close the modal
-    modal.style.display = "none";
-  })
-  .catch((error) => {
-    console.log('Error:', error);
-  });
+    .then(response => response.json())
+    .then(data => {
+      console.log('Success:', data);
+      // Close the modal
+      modal.style.display = "none";
+    })
+    .catch((error) => {
+      console.log('Error:', error);
+    });
+  }
 });
