@@ -470,7 +470,8 @@
       "none": "You haven't placed any orders yet.",
       "invoice": "Invoice",
       "invoiceError": "Invoice can not be generated",
-      "tin": "Enter TIN Number:"
+      "tin": "Enter TIN Number:",
+      "tinError": "Please enter valid TIN number"
     },
     "recover_password": {
       "title": "Reset your password",
