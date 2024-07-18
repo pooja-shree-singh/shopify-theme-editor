@@ -1387,7 +1387,7 @@ document.getElementById('invoiceForm').addEventListener('submit', function(event
     },
     body: JSON.stringify({
       orderId: orderId,
-      paymentResponseValue: tin_number
+      formFieldValue: tin_number
     })
   })
   .then(response => response.json())
