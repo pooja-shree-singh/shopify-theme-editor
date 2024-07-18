@@ -1316,7 +1316,7 @@ var span = document.getElementsByClassName("close")[0];
       //Close all the modals
       modal.style.display = "none";
       QRmodal.style.display = "none";
-      document.getElementById('order_number').value('');
+      document.getElementById('order_number').value = '';
 
       // Clear Previous Image Url
       var QRImage = document.getElementById('QRImage');
@@ -1329,7 +1329,7 @@ var span = document.getElementsByClassName("close")[0];
       const showResult = isCurrentMonth(orderDate);
 
       if(!dataModal && showResult) {
-        document.getElementById('order_number').value(orderId);
+        document.getElementById('order_number').value = orderId;
         modal.style.display = "block";
       }
 
