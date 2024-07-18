@@ -469,7 +469,8 @@
       "total": "Total",
       "none": "You haven't placed any orders yet.",
       "invoice": "Invoice",
-      "invoiceError": "Invoice can not be generated"
+      "invoiceError": "Invoice can not be generated",
+      "tin": "Enter TIN Number:"
     },
     "recover_password": {
       "title": "Reset your password",
