@@ -1407,6 +1407,7 @@ document.getElementById('invoiceForm').addEventListener('submit', function(event
   var flag = true;
   if(tin_number === '') {
     var fieldValid = document.getElementsByClassName('modal-form-error');
+    console.log(fieldValid);
     fieldValid.style.display = "block";
     flag = false;
   }
@@ -1414,6 +1415,7 @@ document.getElementById('invoiceForm').addEventListener('submit', function(event
   if (!validateMalaysiaTIN(tin_number)) {
     flag = false;
     var formTINValid = document.getElementsByClassName('modal-form-tin-validation');
+    console.log(formTINValid);
     formTINValid.style.display = "block";
   }
 
