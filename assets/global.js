@@ -1444,7 +1444,7 @@ document.getElementById('invoiceForm').addEventListener('submit', function(event
 
   if(flag) {
     // Make an AJAX request to update the order metafield
-    fetch('http://localhost:3000/update-order', {
+    fetch('http://localhost:3000/update-order-meta', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
