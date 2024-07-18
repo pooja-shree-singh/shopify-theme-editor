@@ -1404,20 +1404,22 @@ document.getElementById('invoiceForm').addEventListener('submit', function(event
   // Get the value from the input field
   var tin_number = document.getElementById('tin_number').value;
   var orderId = document.getElementById('orderId').value;
-  var flag = false;
+  var flag = true;
+  if(tin_number === '') {
+    var fieldValid = document.getElementById('modal-form-error');
+    fieldValid.style.display = "block";
+    flag = false;
+  }
 
-  if (validateMalaysiaTIN(tin_number)) {
-    console.log("Valid TIN");
-    flag = true;
-    formTINValid.style.display = "none";
-  } else {
+  if (!validateMalaysiaTIN(tin_number)) {
     flag = false;
     var formTINValid = document.getElementById('modal-form-tin-validation');
     formTINValid.style.display = "block";
-    console.log("Invalid TIN");
   }
 
   if(flag) {
+    fieldValid.style.display = "none";
+    formTINValid.style.display = "none";
     // Make an AJAX request to update the order metafield
     fetch('http://localhost:3000/update-order', {
       method: 'POST',
