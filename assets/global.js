@@ -1377,10 +1377,7 @@ document.getElementById('invoiceForm').addEventListener('submit', function(event
   
   // Get the value from the input field
   var tin_number = document.getElementById('tin_number').value;
-  var order_number = document.getElementById('order_number').value;
-  
-  // Replace 'order_id' with the actual order ID
-  var orderId = '5838443741416';
+  var orderId = document.getElementById('order_number').value;
   
   // Make an AJAX request to update the order metafield
   fetch('http://localhost:3000/update-order', {
@@ -1389,7 +1386,7 @@ document.getElementById('invoiceForm').addEventListener('submit', function(event
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-      orderId: order_number,
+      orderId: orderId,
       paymentResponseValue: tin_number
     })
   })
