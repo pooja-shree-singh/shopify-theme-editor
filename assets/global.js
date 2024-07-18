@@ -1397,6 +1397,24 @@ window.onclick = function(event) {
   }
 }
 
+
+// Function to close the modal, reset form, and clear errors
+function closeModal() {
+    const modal = document.getElementById('generateInvoiceModal');
+    modal.style.display = 'none';
+
+    // Reset form fields
+    const form = document.getElementById('invoiceForm');
+    form.reset();
+
+    // Hide error messages
+    var fieldValid = document.getElementsByClassName('modal-form-error')[0];
+    var formTINValid = document.getElementsByClassName('modal-form-tin-validation')[0];
+
+    fieldValid.style.display = "none";
+    formTINValid.style.display = "none";
+}
+
 // Handle form submission
 document.getElementById('invoiceForm').addEventListener('submit', function(event) {
   event.preventDefault();
