@@ -30,6 +30,7 @@
       <h2>{{ 'customer.orders.title' | t }}</h2>
       
       {% section 'invoice' %}
+      
       {% paginate customer.orders by 20 %}
         {%- if customer.orders.size > 0 -%}
           <table role="table" class="order-history">
@@ -89,6 +90,7 @@
                     role="cell"
                     data-label="{{ 'customer.orders.invoice' | t }}"
                   >
+                    <!-- Generate Invoice -->
                     {% assign qrcode_value = order.metafields.custom.qrcode.value %}
                     <button id="generateInvoiceButton" class="generateInvoiceButton btn" data-order-id="{{ order.id }}" data-order-date="{{ order.created_at }}" data-modal="{{ qrcode_value }}">
                       {%- if qrcode_value -%}
