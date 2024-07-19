@@ -34,7 +34,7 @@
         <p>{{ 'customer.order.cancelled_html' | t: date: cancelled_at }}</p>
         <p>{{ 'customer.order.cancelled_reason' | t: reason: order.cancel_reason_label }}</p>
       {%- endif -%}
-      {% section 'invoice' %}
+      {% render 'invoice' %}
 
   <!-- Generate Invoice -->
       {% assign qrcode_value = order.metafields.custom.qrcode.value %}
