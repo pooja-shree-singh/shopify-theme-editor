@@ -1428,7 +1428,7 @@ document.getElementById('invoiceForm').addEventListener('submit', function(event
   var formTINValid = document.getElementsByClassName('modal-form-tin-validation')[0];
   var ajaxMessage = document.getElementsByClassName('modal-form-ajax-validation')[0];
   var flag = true;
-  
+  console.log(orderId);
   if(tin_number === '') {
     fieldValid.style.display = "block";
     flag = false;
