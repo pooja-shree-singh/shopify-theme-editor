@@ -14,6 +14,17 @@
   }
 {%- endstyle -%}
 
+<script>
+  $(function(){
+    $('#create_customer').submit(function(e) {     
+      if ( $('input[name="customer[password]"]').val() != $('input[name="customer[password_confirmation]"]').val()) {
+        e.preventDefault();
+        alert('Passwords do not match.');
+      }
+    });
+  });
+</script>
+
 <div class="customer register section-{{ section.id }}-padding">
   <svg style="display: none">
     <symbol id="icon-error" viewBox="0 0 13 13">
@@ -142,7 +153,7 @@
       </span>
     {%- endif -%}
     <div class="field">
-    <input type="password" value="" name="customer[password_confirmation]" id="confirm-password" class="password text" size="30" />​
+    <input type="password" value="" name="customer[password_confirmation]" id="confirm-password" class="password text" size="30" />
       <label>Confirm Password</label>
     </div>
     <button>
