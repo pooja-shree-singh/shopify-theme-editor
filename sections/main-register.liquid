@@ -79,6 +79,10 @@
         {{ 'customer.register.last_name' | t }}
       </label>
     </div>
+    <div id="birthday" class="field">
+        <label for="birthday" class="label">Birthday</label>
+        <input type="date" value="" name="customer[note][birthday]" id="birthday" class="text" />
+    </div>
     <div class="field">
       <input
         type="email"
@@ -110,6 +114,7 @@
         {{ form.errors.messages.email }}.
       </span>
     {%- endif -%}
+    
     <div class="field">
       <input
         type="password"
