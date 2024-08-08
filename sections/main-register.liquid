@@ -131,7 +131,10 @@
         {{ 'customer.register.password' | t }}
       </label>
     </div>
+    <div class="field">
     <input type="password" value="" name="customer[password_confirmation]" id="confirm-password" class="password text" size="30" />​
+      <label>Confirm Password</label>
+    </div>
     {%- if form.errors contains 'password' -%}
       <span id="RegisterForm-password-error" class="form__message">
         <svg aria-hidden="true" focusable="false">
