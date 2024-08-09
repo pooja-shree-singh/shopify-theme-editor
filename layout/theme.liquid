@@ -382,7 +382,13 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
-  </head>
+  <script type="text/javascript">if(typeof window.hulkappsWishlist === 'undefined') {
+        window.hulkappsWishlist = {};
+        }
+        window.hulkappsWishlist.baseURL = '/apps/advanced-wishlist/api';
+        window.hulkappsWishlist.hasAppBlockSupport = '1';
+        </script>
+</head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
@@ -452,7 +458,8 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-  {%- render "ecom_footer"-%}</body>
+  {%- render "ecom_footer"-%}{% render 'hulkappsWishlistPopup' %}
+</body>
   <script>
     // Wishlist feature: Add or remove the current product from the wishlist
      function toggleWishlist() {
