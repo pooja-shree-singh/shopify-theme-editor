@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -62,6 +71,19 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "complementary_rcrwfn": {
+          "type": "complementary",
+          "settings": {
+            "block_heading": "Pairs well with",
+            "make_collapsible_row": true,
+            "icon": "price_tag",
+            "product_list_limit": 10,
+            "products_per_page": 3,
+            "pagination_style": "counter",
+            "image_ratio": "square",
+            "enable_quick_add": true
+          }
         }
       },
       "block_order": [
@@ -74,7 +96,8 @@
         "quantity_selector",
         "buy_buttons",
         "description",
-        "share"
+        "share",
+        "complementary_rcrwfn"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -134,18 +157,6 @@
     },
     "17168072558fcfc752": {
       "type": "apps",
-      "blocks": {
-        "custom_node_app_app_form_V3BpDQ": {
-          "type": "shopify:\/\/apps\/custom-node-app\/blocks\/app-form\/3cf55730-1212-4628-8894-22cfa532d8cf",
-          "settings": {
-            "form_title": "Forms",
-            "alignment": "center"
-          }
-        }
-      },
-      "block_order": [
-        "custom_node_app_app_form_V3BpDQ"
-      ],
       "settings": {
         "include_margins": true
       }
