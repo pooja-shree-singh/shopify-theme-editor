@@ -472,7 +472,8 @@
       "invoiceError": "Invoice can not be generated",
       "tin": "Enter TIN Number:",
       "tinError": "Please enter valid TIN number",
-      "formInputError": "This is required"
+      "formInputError": "This is required",
+      "reorder": "Reorder"
     },
     "recover_password": {
       "title": "Reset your password",
