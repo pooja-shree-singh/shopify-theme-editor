@@ -48,6 +48,7 @@
                 </th>
                 <th id="ColumnTotal" scope="col" role="columnheader">{{ 'customer.orders.total' | t }}</th>
                 <th id="ColumnInvoice" scope="col" role="columnheader">{{ 'customer.orders.invoice' | t }}</th>
+                <th id="ColumnInvoice" scope="col" role="columnheader">{{ 'customer.orders.reorder' | t }}</th>
               </tr>
             </thead>
             <tbody role="rowgroup">
@@ -102,6 +103,32 @@
                     </button>
                     <span class="showInvoiceError error-text">{{ 'customer.orders.invoiceError' | t }}</span>
                   </td>
+                  <!-- Reorder Button -->
+                  
+                  <td
+                    headers="RowOrder ColumnInvoice"
+                    role="cell"
+                    data-label="{{ 'customer.orders.invoice' | t }}"
+                  >
+                    {% liquid
+                      assign reorder_url = ''
+                      for line_item in order.line_items
+                        assign reorder_url = reorder_url | append: line_item.variant_id | append: ':' | append: line_item.quantity | append: ','
+                      endfor
+                    -%}
+                    <a href="/cart/{{ reorder_url }}" class="reorderButton" style="background: #5D6FB3; color: white; padding: 10px; text-decoration: none">Reorder</a>
+                    <button id="generateInvoiceButton" class="generateInvoiceButton btn" data-order-id="{{ order.id }}" data-order-date="{{ order.created_at }}" data-modal="{{ qrcode_value }}">
+                      {%- if qrcode_value -%}
+                        Show Invoice
+                      {%- else -%}
+                        Generate Invoice
+                      {%- endif -%}
+                    </button>
+                    <span class="showInvoiceError error-text">{{ 'customer.orders.invoiceError' | t }}</span>
+                  </td>
+
+                   <!-- Reorder Button -->
+                  
                 </tr>
               {%- endfor -%}
             </tbody>
