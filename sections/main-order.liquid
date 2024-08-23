@@ -24,13 +24,6 @@
     <h1 class="customer__title">{{ 'customer.account.title' | t }}</h1>
     <a href="{{ routes.account_url }}">{{ 'customer.account.return' | t }}</a>
   </div>
-         {% liquid
-      assign reorder_url = ''
-      for line_item in order.line_items
-        assign reorder_url = reorder_url | append: line_item.variant_id | append: ':' | append: line_item.quantity | append: ','
-      endfor
-    -%}
-    <a href="/cart/{{ reorder_url }}" class="yourbuttonclass" style="background: cornflowerblue; color: white; padding: 10px; text-decoration: none">Reorder</a>
   <div>
     <div>
       <h2>{{ 'customer.order.title' | t: name: order.name }}</h2>
