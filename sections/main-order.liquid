@@ -48,6 +48,16 @@
       <span class="showInvoiceError error-text">{{ 'customer.orders.invoiceError' | t }}</span>
 <!-- Generate Invoice -->
 
+ <!-- Reorder Button -->
+       {% liquid
+      assign reorder_url = ''
+      for line_item in order.line_items
+        assign reorder_url = reorder_url | append: line_item.variant_id | append: ':' | append: line_item.quantity | append: ','
+      endfor
+    -%}
+      <a href="/cart/{{ reorder_url }}" class="reorderButton" style="background: cornflowerblue; color: white; padding: 10px; text-decoration: none">Reorder</a>
+<!-- Reorder Button -->
+
       <table role="table" class="order-details">
         <caption class="visually-hidden">
           {{ 'customer.order.title' | t: name: order.name }}
