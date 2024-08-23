@@ -25,7 +25,6 @@
     </a>
   </div>
 
-
   <div>
     <div>
       <h2>{{ 'customer.orders.title' | t }}</h2>
@@ -185,6 +184,13 @@
       <a href="{{ routes.account_addresses_url }}">
         {{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})
       </a>
+
+      <a href="/account/login#recover" class="reset-account-password">
+        Reset Password
+      </a>
+
+    {% render 'hulkapps-wishlist-account-btn' %}
+      
     </div>
   </div>
 </div>
