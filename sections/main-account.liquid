@@ -116,15 +116,7 @@
                         assign reorder_url = reorder_url | append: line_item.variant_id | append: ':' | append: line_item.quantity | append: ','
                       endfor
                     -%}
-                    <a href="/cart/{{ reorder_url }}" class="reorderButton" style="background: #5D6FB3; color: white; padding: 10px; text-decoration: none">Reorder</a>
-                    <button id="generateInvoiceButton" class="generateInvoiceButton btn" data-order-id="{{ order.id }}" data-order-date="{{ order.created_at }}" data-modal="{{ qrcode_value }}">
-                      {%- if qrcode_value -%}
-                        Show Invoice
-                      {%- else -%}
-                        Generate Invoice
-                      {%- endif -%}
-                    </button>
-                    <span class="showInvoiceError error-text">{{ 'customer.orders.invoiceError' | t }}</span>
+                    <a href="/cart/{{ reorder_url }}" class="reorderButton" style="background: #5D6FB3; color: white; padding: 10px; text-decoration: none">{{ 'customer.orders.reorder' | t }}</a>
                   </td>
 
                    <!-- Reorder Button -->
