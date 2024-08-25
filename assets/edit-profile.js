@@ -1,4 +1,8 @@
-  // Handle form submission
+// Get the modal
+var modal = document.getElementById("editProfileModal");
+
+
+// Handle form submission
 document.getElementById('custom-account-form').addEventListener('submit', function(event) {
   event.preventDefault();
 
