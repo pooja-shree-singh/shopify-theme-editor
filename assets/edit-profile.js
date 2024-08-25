@@ -2,6 +2,32 @@
 var modal = document.getElementById("editProfileModal");
 
 
+// Get the button that opens the modal
+var buttons = document.querySelectorAll('.generateInvoiceButton');
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+
+// When the user clicks on <span> (x), close the modal
+var spanClick = document.querySelectorAll('span.close');
+
+// Add click event listener to each button
+  spanClick.forEach(function(item) {
+    item.addEventListener('click', function(event) {
+      //Close all the modals
+      closeModal();
+      QRmodal.style.display = "none";
+    });
+  });
+
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    closeModal();
+  }
+}
+
 // Handle form submission
 document.getElementById('custom-account-form').addEventListener('submit', function(event) {
   event.preventDefault();
