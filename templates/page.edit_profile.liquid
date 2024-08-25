@@ -103,7 +103,7 @@ document.getElementById('custom-account-form').addEventListener('submit', functi
 
   if(flag) {
     // Make an AJAX request to update the order metafield
-    fetch('http://localhost:3000/update-order-meta', {
+    fetch('http://localhost:3000/edit-profile', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -116,7 +116,7 @@ document.getElementById('custom-account-form').addEventListener('submit', functi
     .then(response => response.json())
     .then(data => {
       console.log('Success:', data);
-      ajaxMessage.textContent = "The Invoice has been generated";
+      ajaxMessage.textContent = "The Profile has been updated";
       ajaxMessage.style.display = "block";
     })
     .catch((error) => {
