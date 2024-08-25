@@ -71,6 +71,8 @@
   <label for="Password">New Password (leave blank to keep current password)</label>
   <input type="password" id="Password" name="customer[password]">
   <div id="error-message"></div>
+  <span class="edit-form-ajax-validation"></span>
+  <div id="success-message" style="display:none;">Form submitted successfully!</div>
   <button type="submit">Save</button>
   
 </form>
@@ -79,6 +81,10 @@
   // Handle form submission
 document.getElementById('custom-account-form').addEventListener('submit', function(event) {
   event.preventDefault();
+
+  // Clear previous messages
+    $('#error-message').html('');
+    $('#success-message').hide();
   
   // Validate form fields
     let isValid = true;
@@ -100,6 +106,8 @@ document.getElementById('custom-account-form').addEventListener('submit', functi
     errorMessage += 'Phone is required.<br>';
     isValid = false;
   }
+
+  var ajaxMessage = document.getElementsByClassName('edit-form-ajax-validation')[0];
   
   if(isValid) {
     // Make an AJAX request to update the order metafield
