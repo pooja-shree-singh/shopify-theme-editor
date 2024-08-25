@@ -48,7 +48,7 @@
 }
 </style>
 
-<form class="custom-account-form">
+<form class="custom-account-form" id="custom-account-form">
 <h2>Edit Profile</h2>
   <input type="hidden" name="form_type" value="customer">
   <input type="hidden" name="utf8" value="✓">
@@ -73,3 +73,57 @@
 
   <button type="submit">Save</button>
 </form>
+
+<script>
+  // Handle form submission
+document.getElementById('invoiceForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  // Get the value from the input field
+  var tin_number = document.getElementById('tin_number').value;
+  var orderId = document.getElementById('orderId').value;
+  var fieldValid = document.getElementsByClassName('modal-form-error')[0];
+  var formTINValid = document.getElementsByClassName('modal-form-tin-validation')[0];
+  var ajaxMessage = document.getElementsByClassName('modal-form-ajax-validation')[0];
+  var flag = true;
+  console.log(orderId);
+  if(tin_number === '') {
+    fieldValid.style.display = "block";
+    flag = false;
+  }else{
+    fieldValid.style.display = "none";
+  }
+
+  if (!validateMalaysiaTIN(tin_number)) {
+    flag = false;
+    formTINValid.style.display = "block";
+  }else{
+    formTINValid.style.display = "none";
+  }
+
+  if(flag) {
+    // Make an AJAX request to update the order metafield
+    fetch('http://localhost:3000/update-order-meta', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        orderId: orderId,
+        formFieldValue: tin_number
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Success:', data);
+      ajaxMessage.textContent = "The Invoice has been generated";
+      ajaxMessage.style.display = "block";
+    })
+    .catch((error) => {
+      ajaxMessage.textContent = error;
+      ajaxMessage.style.display = "block";
+      console.log('Error:', error);
+    });
+  }
+});
+</script>
