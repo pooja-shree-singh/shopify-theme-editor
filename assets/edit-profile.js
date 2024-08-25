@@ -18,6 +18,16 @@ openModalLink.onclick = function(event) {
         modal.style.display = "none";
     }
 
+// When the user clicks on <span> (x), close the modal
+var spanClick = document.querySelectorAll('span.close');
+
+// Add click event listener to each button
+  spanClick.forEach(function(item) {
+    item.addEventListener('click', function(event) {
+      modal.style.display = "none";
+    });
+  });
+
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
