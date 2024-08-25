@@ -70,8 +70,9 @@
 
   <label for="Password">New Password (leave blank to keep current password)</label>
   <input type="password" id="Password" name="customer[password]">
-
+  <div id="error-message"></div>
   <button type="submit">Save</button>
+  
 </form>
 
 <script>
@@ -79,29 +80,28 @@
 document.getElementById('custom-account-form').addEventListener('submit', function(event) {
   event.preventDefault();
   
-  // Get the value from the input field
-  var tin_number = document.getElementById('tin_number').value;
-  var orderId = document.getElementById('orderId').value;
-  var fieldValid = document.getElementsByClassName('modal-form-error')[0];
-  var formTINValid = document.getElementsByClassName('modal-form-tin-validation')[0];
-  var ajaxMessage = document.getElementsByClassName('modal-form-ajax-validation')[0];
-  var flag = true;
-  console.log(orderId);
-  if(tin_number === '') {
-    fieldValid.style.display = "block";
-    flag = false;
-  }else{
-    fieldValid.style.display = "none";
+  // Validate form fields
+    let isValid = true;
+    let errorMessage = '';
+
+  // Validate FirstName
+  if ($('#FirstName').val().trim() === '') {
+    errorMessage += 'FirstName is required.<br>';
+    isValid = false;
+  }
+  // Validate LastName
+  if ($('#LastName').val().trim() === '') {
+    errorMessage += 'LastName is required.<br>';
+    isValid = false;
   }
 
-  if (!validateMalaysiaTIN(tin_number)) {
-    flag = false;
-    formTINValid.style.display = "block";
-  }else{
-    formTINValid.style.display = "none";
+  // Validate Phone
+  if ($('#phone').val().trim() === '') {
+    errorMessage += 'Phone is required.<br>';
+    isValid = false;
   }
-
-  if(flag) {
+  
+  if(isValid) {
     // Make an AJAX request to update the order metafield
     fetch('http://localhost:3000/edit-profile', {
       method: 'POST',
@@ -124,6 +124,8 @@ document.getElementById('custom-account-form').addEventListener('submit', functi
       ajaxMessage.style.display = "block";
       console.log('Error:', error);
     });
+  }else{
+    $('#error-message').html(errorMessage); // Display validation errors
   }
 });
 </script>
