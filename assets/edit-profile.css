@@ -58,3 +58,7 @@
     font-size: 1.4rem;
     font-family: inherit;
 }
+
+.editProfileButton a:hover{
+  text-decoration-thickness: 0.2rem;
+}
