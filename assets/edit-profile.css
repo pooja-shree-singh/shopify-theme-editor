@@ -53,7 +53,7 @@
     box-shadow: none;
     text-decoration: underline;
     text-underline-offset: .3rem;
-    color: rgba(var(--color-link),var(--alpha-link));
+    color: #121212d9;
     background-color: transparent;
     font-size: 1.4rem;
     font-family: inherit;
