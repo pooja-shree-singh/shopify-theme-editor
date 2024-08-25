@@ -90,7 +90,7 @@ document.getElementById('custom-account-form').addEventListener('submit', functi
       customerID: $('#customerID').val().trim(),
       FirstName: $('#FirstName').val().trim(),
       LastName: $('#LastName').val().trim(),
-      phone: $('#phone').val().trim()
+      phone: $('#Phone').val().trim()
     };
   
   // Validate form fields
@@ -109,7 +109,7 @@ document.getElementById('custom-account-form').addEventListener('submit', functi
   }
 
   // Validate Phone
-  if ($('#phone').val().trim() === '') {
+  if ($('#Phone').val().trim() === '') {
     errorMessage += 'Phone is required.<br>';
     isValid = false;
   }
