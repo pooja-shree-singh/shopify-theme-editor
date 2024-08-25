@@ -115,6 +115,9 @@ document.getElementById('custom-account-form').addEventListener('submit', functi
   }
 
   var ajaxMessage = document.getElementsByClassName('edit-form-ajax-validation')[0];
+
+  console.log(errorMessage);
+  console.log(ajaxMessage);
   
   if(isValid) {
     // Make an AJAX request to update the order metafield
