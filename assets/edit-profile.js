@@ -3,7 +3,7 @@ var modal = document.getElementById("editProfileModal");
 
 
 // Get the button that opens the modal
-var buttons = document.querySelectorAll('.generateInvoiceButton');
+var buttons = document.querySelectorAll('.editProfileButton');
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
