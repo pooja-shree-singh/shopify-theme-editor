@@ -5,7 +5,7 @@ var modal = document.getElementById("editProfileModal");
 // Get the button that opens the modal
 var openModalLink = document.getElementById("editProfileButton");
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var closeButton = document.getElementsByClassName("close")[0];
 
 // When the user clicks the link, open the modal
 openModalLink.onclick = function(event) {
@@ -13,9 +13,10 @@ openModalLink.onclick = function(event) {
     modal.style.display = "block";
 }
 
-
 // When the user clicks on <span> (x), close the modal
-var spanClick = document.querySelectorAll('span.close');
+    closeButton.onclick = function() {
+        modal.style.display = "none";
+    }
 
 // Add click event listener to each button
   spanClick.forEach(function(item) {
