@@ -53,6 +53,8 @@
   <input type="hidden" name="form_type" value="customer">
   <input type="hidden" name="utf8" value="✓">
 
+  <input type="hidden" id="customerID" name="customer[id]" value="{{ customer.id }}">
+  
   <label for="FirstName">First Name</label>
   <input type="text" id="FirstName" name="customer[first_name]" value="{{ customer.first_name }}" required>
 
