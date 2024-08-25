@@ -84,6 +84,14 @@ document.getElementById('custom-account-form').addEventListener('submit', functi
   // Clear previous messages
     $('#error-message').html('');
     $('#success-message').hide();
+
+  // Collect form data
+    let formData = {
+      customerID: $('#customerID').val().trim(),
+      FirstName: $('#FirstName').val().trim(),
+      LastName: $('#LastName').val().trim(),
+      phone: $('#phone').val().trim()
+    };
   
   // Validate form fields
     let isValid = true;
