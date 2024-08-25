@@ -18,15 +18,6 @@ openModalLink.onclick = function(event) {
         modal.style.display = "none";
     }
 
-// Add click event listener to each button
-  spanClick.forEach(function(item) {
-    item.addEventListener('click', function(event) {
-      //Close all the modals
-      closeModal();
-      QRmodal.style.display = "none";
-    });
-  });
-
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
