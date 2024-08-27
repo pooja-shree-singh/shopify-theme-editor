@@ -43,10 +43,31 @@ document.getElementById('change-password-form').addEventListener('submit', funct
         const currentPassword = document.getElementById('current-password').value;
         const newPassword = document.getElementById('new-password').value;
         const confirmPassword = document.getElementById('confirm-password').value;
+
+       // Validate form fields
+          let isValid = true;
+          let errorMessage = '';
+      
+        // Validate FirstName
+        if (currentPassword.trim() === '') {
+          errorMessage += 'Current Password is required.<br>';
+          isValid = false;
+        }
+        // Validate LastName
+        if (newPassword.trim() === '') {
+          errorMessage += 'New Password is required.<br>';
+          isValid = false;
+        }
+      
+        // Validate Phone
+        if (confirmPassword.trim() === '') {
+          errorMessage += 'Confirm Password is required.<br>';
+          isValid = false;
+        }
     
         if (newPassword !== confirmPassword) {
-            alert('New passwords do not match.');
-            return;
+            errorMessage += 'New Passwords do not match.<br>';
+            isValid = false;
         }
 
         // Use Fetch API to send a POST request to change the password
@@ -54,27 +75,30 @@ document.getElementById('change-password-form').addEventListener('submit', funct
      var ajaxMessage = document.getElementsByClassName('edit-form-ajax-validation')[0];
       var errorMessage = document.getElementById('error-message');
   
-      fetch('http://localhost:3000/change-password', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-                customerEmail: customerEmail,
-                current_password: currentPassword,
-                new_password: newPassword,
-                confirm_password: confirmPassword,
-            }),
-        })
-        .then(response => response.json())
-        .then(data => {
-          console.log('Success:', data);
-          ajaxMessage.textContent = "Password has been updated.";
-          ajaxMessage.style.display = "block";
-        })
-        .catch((error) => {
-          errorMessage.textContent = error;
-          errorMessage.style.display = "block";
-          console.log('Error:', error);
-        });
+      if(isValid) {
+        fetch('http://localhost:3000/change-password', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                  customerEmail: customerEmail,
+                  current_password: currentPassword,
+                  new_password: newPassword,
+                  confirm_password: confirmPassword,
+              }),
+          })
+          .then(response => response.json())
+          .then(data => {
+            console.log('Success:', data);
+            ajaxMessage.textContent = "Password has been updated.";
+            ajaxMessage.style.display = "block";
+          })
+          .catch((error) => {
+            $('#error-message').html(error);
+            console.log('Error:', error);
+          });
+      }else{
+        $('#error-message').html(errorMessage); // Display validation errors
+      }
     });
