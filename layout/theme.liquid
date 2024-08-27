@@ -453,6 +453,9 @@
         recipientFormCollapsed: `{{ 'recipient.form.collapsed' | t }}`,
         countrySelectorSearchCount: `{{ 'localization.country_results_count' | t: count: '[count]' }}`,
       };
+
+      //Custom Node App Url
+      window.customAppUrl = "{{ settings.custom_app_url }}";
     </script>
 
     {%- if settings.predictive_search_enabled -%}
