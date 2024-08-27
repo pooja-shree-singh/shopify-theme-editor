@@ -14,7 +14,7 @@ function closeModal() {
     form.reset();
 
     // Hide error messages
-    var ajaxError = document.getElementsByID('password-form-error-message');
+    var ajaxError = document.getElementById('password-form-error-message');
     var ajaxMessage = document.getElementsByClassName('password-form-ajax-validation')[0];
     ajaxMessage.textContent = '';
     ajaxMessage.style.display = "none";
