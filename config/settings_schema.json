@@ -1551,5 +1551,16 @@
         "default": "scheme-1"
       }
     ]
+  },
+  {
+    "name": "Custom Node App Settings",
+    "settings": [
+      {
+        "type": "text",
+        "id": "custom_app_url",
+        "label": "Custom App URL",
+        "default": "http://localhost:3000"
+      }
+    ]
   }
 ]
