@@ -86,9 +86,9 @@ document.getElementById('change-password-form').addEventListener('submit', funct
             isValid = false;
         }
 
-    var customAppUrl = "{{ settings.custom_app_url }}";
+      var customAppUrl = window.customAppUrl;
 
-    console.log(customAppUrl);
+      console.log(customAppUrl);
 
         // Use Fetch API to send a POST request to change the password
 
