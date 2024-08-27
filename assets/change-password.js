@@ -96,34 +96,34 @@ document.getElementById('change-password-form').addEventListener('submit', funct
         $('#password-form-error-message').html('');
       ajaxMessage.style.display = "none";
   
-      // if(isValid) {
-      //   fetch('http://localhost:3000/change-password', {
-      //       method: 'POST',
-      //       headers: {
-      //         'Content-Type': 'application/json'
-      //       },
-      //       body: JSON.stringify({
-      //             customerEmail: customerEmail,
-      //             current_password: currentPassword,
-      //             new_password: newPassword,
-      //             confirm_password: confirmPassword,
-      //         }),
-      //     })
-      //     .then(response => response.json())
-      //     .then(data => {
-      //       console.log('Success:', data);
-      //       if(data.status == 200){
-      //         ajaxMessage.textContent = "Password has been updated. Please login again to continue.";
-      //       }else{
-      //         ajaxMessage.textContent = data.message;
-      //       }
-      //         ajaxMessage.style.display = "block";
-      //     })
-      //     .catch((error) => {
-      //       $('#password-form-error-message').html(error);
-      //       console.log('Error:', error);
-      //     });
-      // }else{
-      //   $('#password-form-error-message').html(errorMessage); // Display validation errors
-      // }
+      if(isValid) {
+        fetch(customAppUrl+'/change-password', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                  customerEmail: customerEmail,
+                  current_password: currentPassword,
+                  new_password: newPassword,
+                  confirm_password: confirmPassword,
+              }),
+          })
+          .then(response => response.json())
+          .then(data => {
+            console.log('Success:', data);
+            if(data.status == 200){
+              ajaxMessage.textContent = "Password has been updated. Please login again to continue.";
+            }else{
+              ajaxMessage.textContent = data.message;
+            }
+              ajaxMessage.style.display = "block";
+          })
+          .catch((error) => {
+            $('#password-form-error-message').html(error);
+            console.log('Error:', error);
+          });
+      }else{
+        $('#password-form-error-message').html(errorMessage); // Display validation errors
+      }
     });
