@@ -74,6 +74,7 @@ document.getElementById('custom-account-form').addEventListener('submit', functi
   }
 
   var ajaxMessage = document.getElementsByClassName('edit-form-ajax-validation')[0];
+  var errorMessage = document.getElementById('error-message');
 
   console.log(errorMessage);
   console.log(ajaxMessage);
