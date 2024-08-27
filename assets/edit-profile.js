@@ -3,6 +3,8 @@ var modal = document.getElementById("editProfileModal");
 
 console.log(modal);
 
+console.log('sadsadasdsa');
+
 // Get the button that opens the modal
 var openModalLink = document.getElementById("editProfileButton");
 // Get the <span> element that closes the modal
