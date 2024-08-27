@@ -75,6 +75,7 @@ document.getElementById('custom-account-form').addEventListener('submit', functi
   }
 
   var ajaxMessage = document.getElementsByClassName('edit-form-ajax-validation')[0];
+  ajaxMessage.style.display = "none";
   // var errorMessageCOn = document.getElementById('error-message');
 
   console.log(errorMessage);
@@ -96,8 +97,7 @@ document.getElementById('custom-account-form').addEventListener('submit', functi
       ajaxMessage.style.display = "block";
     })
     .catch((error) => {
-      errorMessage.textContent = error;
-      errorMessage.style.display = "block";
+      $('#error-message').html(error)
       console.log('Error:', error);
     });
   }else{
