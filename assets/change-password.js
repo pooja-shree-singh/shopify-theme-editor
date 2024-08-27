@@ -39,6 +39,7 @@ window.onclick = function(event) {
 document.getElementById('change-password-form').addEventListener('submit', function(event) {
         event.preventDefault();
 
+        const customerEmail = document.getElementById('customerEmail').value;
         const currentPassword = document.getElementById('current-password').value;
         const newPassword = document.getElementById('new-password').value;
         const confirmPassword = document.getElementById('confirm-password').value;
@@ -55,6 +56,7 @@ document.getElementById('change-password-form').addEventListener('submit', funct
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
+                customerEmail: customerEmail,
                 current_password: currentPassword,
                 new_password: newPassword,
                 confirm_password: confirmPassword,
@@ -68,4 +70,24 @@ document.getElementById('change-password-form').addEventListener('submit', funct
             }
         })
         .catch(error => console.error('Error:', error));
+
+       var ajaxMessage = document.getElementsByClassName('edit-form-ajax-validation')[0];
+      fetch('http://localhost:3000/edit-profile', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formData)
+        })
+        .then(response => response.json())
+        .then(data => {
+          console.log('Success:', data);
+          ajaxMessage.textContent = "The Profile has been updated";
+          ajaxMessage.style.display = "block";
+        })
+        .catch((error) => {
+          errorMessage.textContent = error;
+          errorMessage.style.display = "block";
+          console.log('Error:', error);
+        });
     });
