@@ -75,6 +75,7 @@ document.getElementById('custom-account-form').addEventListener('submit', functi
   }
 
   var ajaxMessage = document.getElementsByClassName('edit-form-ajax-validation')[0];
+  $('#error-message').html('');
   ajaxMessage.style.display = "none";
   // var errorMessageCOn = document.getElementById('error-message');
 
