@@ -73,7 +73,6 @@ document.getElementById('change-password-form').addEventListener('submit', funct
         // Use Fetch API to send a POST request to change the password
 
      var ajaxMessage = document.getElementsByClassName('password-form-ajax-validation')[0];
-      var errorMessage = document.getElementById('password-form-error-message');
   
       if(isValid) {
         fetch('http://localhost:3000/change-password', {
@@ -95,10 +94,10 @@ document.getElementById('change-password-form').addEventListener('submit', funct
             ajaxMessage.style.display = "block";
           })
           .catch((error) => {
-            $('#error-message').html(error);
+            $('#password-form-error-message').html(error);
             console.log('Error:', error);
           });
       }else{
-        $('#error-message').html(errorMessage); // Display validation errors
+        $('#password-form-error-message').html(errorMessage); // Display validation errors
       }
     });
