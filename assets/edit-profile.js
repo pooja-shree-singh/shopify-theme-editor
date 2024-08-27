@@ -1,5 +1,5 @@
 // Get the modal
-var modal = document.getElementById("editProfileModal");
+var profileModal = document.getElementById("editProfileModal");
 
 // Get the button that opens the modal
 var openProfileModalLink = document.getElementById("editProfileButton");
@@ -9,13 +9,13 @@ var closeButton = document.getElementsByClassName("close")[0];
 // When the user clicks the link, open the modal
 openProfileModalLink.onclick = function(event) {
     event.preventDefault(); // Prevent default link behavior
-  console.log(modal);
-    modal.style.display = "block";
+  console.log(profileModal);
+    profileModal.style.display = "block";
 }
 
 // When the user clicks on <span> (x), close the modal
     closeButton.onclick = function() {
-        modal.style.display = "none";
+        profileModal.style.display = "none";
     }
 
 // When the user clicks on <span> (x), close the modal
@@ -24,15 +24,15 @@ var spanClick = document.querySelectorAll('span.close');
 // Add click event listener to each button
   spanClick.forEach(function(item) {
     item.addEventListener('click', function(event) {
-      modal.style.display = "none";
+      profileModal.style.display = "none";
     });
   });
 
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-  if (event.target == modal) {
-       modal.style.display = "none";
+  if (event.target == profileModal) {
+       profileModal.style.display = "none";
   }
 }
 
