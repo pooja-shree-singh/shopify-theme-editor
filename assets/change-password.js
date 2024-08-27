@@ -85,16 +85,12 @@ document.getElementById('change-password-form').addEventListener('submit', funct
             errorMessage += 'New Passwords do not match.<br>';
             isValid = false;
         }
+       var ajaxMessage = document.getElementsByClassName('password-form-ajax-validation')[0];
+        $('#password-form-error-message').html('');
+        ajaxMessage.style.display = "none";
 
       var customAppUrl = window.customAppUrl;
-
-      console.log(customAppUrl);
-
-        // Use Fetch API to send a POST request to change the password
-
-     var ajaxMessage = document.getElementsByClassName('password-form-ajax-validation')[0];
-        $('#password-form-error-message').html('');
-      ajaxMessage.style.display = "none";
+      // Use Fetch API to send a POST request to change the password
   
       if(isValid) {
         fetch(customAppUrl+'/change-password', {
