@@ -71,8 +71,10 @@ document.getElementById('change-password-form').addEventListener('submit', funct
         })
         .catch(error => console.error('Error:', error));
 
-       var ajaxMessage = document.getElementsByClassName('edit-form-ajax-validation')[0];
-      fetch('http://localhost:3000/edit-profile', {
+     var ajaxMessage = document.getElementsByClassName('edit-form-ajax-validation')[0];
+      var errorMessage = document.getElementById('error-message');
+  
+      fetch('http://localhost:3000/change-password', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
