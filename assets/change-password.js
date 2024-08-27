@@ -69,7 +69,7 @@ document.getElementById('change-password-form').addEventListener('submit', funct
         .then(response => response.json())
         .then(data => {
           console.log('Success:', data);
-          ajaxMessage.textContent = "The Profile has been updated";
+          ajaxMessage.textContent = "Password has been updated.";
           ajaxMessage.style.display = "block";
         })
         .catch((error) => {
