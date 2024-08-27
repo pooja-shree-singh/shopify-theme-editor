@@ -1442,10 +1442,11 @@ document.getElementById('invoiceForm').addEventListener('submit', function(event
   }else{
     formTINValid.style.display = "none";
   }
+  var customAppUrl = window.customAppUrl;
 
   if(flag) {
     // Make an AJAX request to update the order metafield
-    fetch('http://localhost:3000/update-order-meta', {
+    fetch(customAppUrl+'/update-order-meta', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
