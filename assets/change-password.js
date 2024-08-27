@@ -73,6 +73,7 @@ document.getElementById('change-password-form').addEventListener('submit', funct
         // Use Fetch API to send a POST request to change the password
 
      var ajaxMessage = document.getElementsByClassName('password-form-ajax-validation')[0];
+      ajaxMessage.style.display = "none";
   
       if(isValid) {
         fetch('http://localhost:3000/change-password', {
