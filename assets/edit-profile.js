@@ -31,8 +31,8 @@ var spanClick = document.querySelectorAll('span.close');
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-  if (event.target == profileModal) {
-       profileModal.style.display = "none";
+  if (event.target == modal) {
+       modal.style.display = "none";
   }
 }
 
