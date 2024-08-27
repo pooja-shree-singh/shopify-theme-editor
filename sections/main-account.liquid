@@ -193,9 +193,10 @@
         Edit Profile
       </a>
 
-      <a href="/pages/reset-password" class="reset-account-password" style="display: block;">
-        Reset Password
-      </a>
+      {% render 'change-password' %}
+      <div id="resetPassword" class="resetPassword">
+          Reset Password
+      </div>
 
     {% render 'hulkapps-wishlist-account-btn' %}
       
