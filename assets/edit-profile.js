@@ -2,12 +2,12 @@
 var modal = document.getElementById("editProfileModal");
 
 // Get the button that opens the modal
-var openModalLink = document.getElementById("editProfileButton");
+var openProfileModalLink = document.getElementById("editProfileButton");
 // Get the <span> element that closes the modal
 var closeButton = document.getElementsByClassName("close")[0];
 
 // When the user clicks the link, open the modal
-openModalLink.onclick = function(event) {
+openProfileModalLink.onclick = function(event) {
     event.preventDefault(); // Prevent default link behavior
   console.log(modal);
     modal.style.display = "block";
