@@ -79,12 +79,11 @@ document.getElementById('custom-account-form').addEventListener('submit', functi
   ajaxMessage.style.display = "none";
   // var errorMessageCOn = document.getElementById('error-message');
 
-  console.log(errorMessage);
-  console.log(ajaxMessage);
+  var customAppUrl = window.customAppUrl;
   
   if(isValid) {
     // Make an AJAX request to update the order metafield
-    fetch('http://localhost:3000/edit-profile', {
+    fetch(customAppUrl+'/edit-profile', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
