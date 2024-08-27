@@ -7,6 +7,20 @@ var openModalLink = document.getElementById("resetPassword");
 // Get the <span> element that closes the modal
 var closeButton = document.getElementsByClassName("close")[0];
 
+// Function to close the modal, reset form, and clear errors
+function closeModal() {
+    // Reset form fields
+    const form = document.getElementById('change-password-form');
+    form.reset();
+
+    // Hide error messages
+    var ajaxError = document.getElementsByID('password-form-error-message');
+    var ajaxMessage = document.getElementsByClassName('password-form-ajax-validation')[0];
+    ajaxMessage.textContent = '';
+    ajaxMessage.style.display = "none";
+    ajaxError.style.display = "none";
+}
+
 // When the user clicks the link, open the modal
 openModalLink.onclick = function(event) {
     event.preventDefault(); // Prevent default link behavior
@@ -24,6 +38,7 @@ var spanClick = document.querySelectorAll('span.close');
 // Add click event listener to each button
   spanClick.forEach(function(item) {
     item.addEventListener('click', function(event) {
+      closeModal();
       modal.style.display = "none";
     });
   });
@@ -31,6 +46,7 @@ var spanClick = document.querySelectorAll('span.close');
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
+    closeModal();
        modal.style.display = "none";
   }
 }
