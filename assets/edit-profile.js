@@ -9,7 +9,6 @@ var closeButton = document.getElementsByClassName("close")[0];
 // When the user clicks the link, open the modal
 openProfileModalLink.onclick = function(event) {
     event.preventDefault(); // Prevent default link behavior
-  console.log(profileModal);
     profileModal.style.display = "block";
 }
 
@@ -31,6 +30,9 @@ var spanClick = document.querySelectorAll('span.close');
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
+  console.log(profileModal);
+  console.log(modal);
+  console.log(event.target);
   if (event.target == modal) {
        modal.style.display = "none";
   }
