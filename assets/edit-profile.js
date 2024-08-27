@@ -1,6 +1,7 @@
 // Get the modal
 var modal = document.getElementById("editProfileModal");
 
+console.log(modal);
 
 // Get the button that opens the modal
 var openModalLink = document.getElementById("editProfileButton");
