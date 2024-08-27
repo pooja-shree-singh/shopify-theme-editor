@@ -76,6 +76,7 @@ document.getElementById('change-password-form').addEventListener('submit', funct
       ajaxMessage.style.display = "none";
   
       if(isValid) {
+        $('#password-form-error-message').html('');
         fetch('http://localhost:3000/change-password', {
             method: 'POST',
             headers: {
