@@ -43,11 +43,13 @@ document.getElementById('change-password-form').addEventListener('submit', funct
         const currentPassword = document.getElementById('current-password').value;
         const newPassword = document.getElementById('new-password').value;
         const confirmPassword = document.getElementById('confirm-password').value;
-        
+    
         if (newPassword !== confirmPassword) {
             alert('New passwords do not match.');
             return;
         }
+
+        // Use Fetch API to send a POST request to change the password
 
      var ajaxMessage = document.getElementsByClassName('edit-form-ajax-validation')[0];
       var errorMessage = document.getElementById('error-message');
@@ -57,7 +59,12 @@ document.getElementById('change-password-form').addEventListener('submit', funct
           headers: {
             'Content-Type': 'application/json'
           },
-          body: JSON.stringify(formData)
+          body: JSON.stringify({
+                customerEmail: customerEmail,
+                current_password: currentPassword,
+                new_password: newPassword,
+                confirm_password: confirmPassword,
+            }),
         })
         .then(response => response.json())
         .then(data => {
