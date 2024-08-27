@@ -92,9 +92,7 @@ document.getElementById('change-password-form').addEventListener('submit', funct
           .then(response => response.json())
           .then(data => {
             console.log('Success:', data);
-            console.log(data.status);
-            console.log('yes')
-            if(data.status = 200){
+            if(data.status == 200){
               ajaxMessage.textContent = "Password has been updated.";
             }else{
               ajaxMessage.textContent = data.message;
